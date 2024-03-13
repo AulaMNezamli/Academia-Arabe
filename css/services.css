@@ -1,7 +1,3 @@
-:root {
-  --color-one: #454b4f;
-}
-
 .hero-section {
   background-image: url(../images/Hero\ Section\ s.png);
   background-repeat: no-repeat;
@@ -160,6 +156,11 @@ section.form {
   align-items: flex-start;
   gap: 40px;
 }
+.text-left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .text-left-side h3 {
   color: #1b1e1f;
@@ -168,7 +169,6 @@ section.form {
   font-weight: 700;
   line-height: 72px;
   margin: 0;
-  padding-bottom: 16px;
 }
 .text-left-side p {
   color: var(--color-one);

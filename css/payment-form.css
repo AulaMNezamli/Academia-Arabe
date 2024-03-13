@@ -1,0 +1,79 @@
+section {
+  background-image: unset;
+  padding: 64px 100px;
+}
+#row {
+  gap: 0px;
+}
+.text-registration {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.payment-methods {
+  display: flex;
+  gap: 16px;
+}
+.form-registration h5 {
+  color: #1b1e1f;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.payment-amount {
+  display: flex;
+  justify-content: space-between;
+}
+.payment-amount h6 {
+  font-size: 16px;
+  color: var(--color-one);
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 24px;
+}
+.payment-amount span {
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+section.successfully {
+  background-image: url(../images/Groupa.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.registered-successfully {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  text-align: center;
+}
+.text-successfully {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 588px;
+  margin: auto;
+}
+.text-successfully h3 {
+  color: #1b1e1f;
+  font-family: var(--font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  margin: 0;
+}
+.text-successfully p {
+  color: var(--color-one);
+  font-family: var(--font-family);
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+.button-successfully button {
+  border: unset;
+}

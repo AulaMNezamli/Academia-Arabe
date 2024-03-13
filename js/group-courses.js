@@ -22,7 +22,7 @@ overlay.onclick = (_) => {
   overlay.style.display = "none";
   document.body.style.overflowY = "auto";
 };
-// ======================================================
+// ========================================================
 
 // SideBar
 function openNav() {
@@ -36,11 +36,43 @@ function openNav() {
     open.style.display = "none";
   }
 }
+// ========================================================
+
 // Close
 function closeNav() {
   let open = document.getElementById("mySidenav");
   open.style.display = "none";
 }
+function scrollToSection() {
+  var section = document.getElementById("mySection");
+  section.scrollIntoView({ behavior: "smooth" });
+}
+
+// ========================================================
+
+$(".slider-three").owlCarousel({
+  items: 3,
+  loop: false,
+  margin: 16,
+  nav: false,
+  navText: [
+    '<i class="fa-solid fa-chevron-left"></i>',
+    '<i class="fa-solid fa-chevron-right"></i>',
+  ],
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 4.25,
+    },
+  },
+});
+
+// ========================================================
 
 $(".slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
   if (!e.namespace) {
@@ -53,7 +85,7 @@ $(".slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
       carousel.items().length.toString().padStart(2, "0")
   );
 });
-$(".owl-carousel").owlCarousel({
+$("#owl-carousel").owlCarousel({
   loop: false,
   margin: 24,
   nav: true,
@@ -63,40 +95,48 @@ $(".owl-carousel").owlCarousel({
   ],
   responsive: {
     0: {
-      items: 1,
+      items: 1.25,
     },
     600: {
-      items: 1,
+      items: 2,
     },
     1000: {
-      items: 1,
+      items: 4,
     },
   },
 });
+// ========================================================
 
-$(".owl-prev").click(function () {
-  $(".owl-carousel").trigger("prev.owl.carousel");
-});
-
-$(".owl-next").click(function () {
-  $(".owl-carousel").trigger("next.owl.carousel");
-});
-
-// ======================================================
-function playPause() {
-  var video = document.getElementById("myVideo");
-  var overlay = document.querySelector(".overlay-one");
-  var regular = document.getElementById("fa-regular");
-
-  if (video.paused) {
-    video.play();
-    overlay.style.display = "none";
-    regular.style.display = "none";
-  } else {
-    video.pause();
-    overlay.style.display = "block";
-    regular.style.display = "block";
-  }
-}
-
-// ======================================================
+$(".slider-one")
+  .on("initialized.owl.carousel changed.owl.carousel", function (e) {
+    if (!e.namespace) {
+      return;
+    }
+    var carousel = e.relatedTarget;
+    $(".slider-counter-one").text(
+      (carousel.relative(carousel.current()) + 1).toString().padStart(2, "0") +
+        " / " +
+        carousel.items().length.toString().padStart(2, "0")
+    );
+  })
+  .owlCarousel({
+    items: 1,
+    loop: false,
+    margin: 0,
+    nav: true,
+    navText: [
+      '<i class="fa-solid fa-chevron-left"></i>',
+      '<i class="fa-solid fa-chevron-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });

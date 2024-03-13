@@ -1,0 +1,124 @@
+nav#navbar-navigation {
+  position: unset;
+}
+.text-left-side p {
+  width: auto !important;
+}
+.all-form {
+  gap: 40px !important;
+}
+section.form {
+  padding: 64px 0 !important;
+}
+.right-side {
+  display: block !important;
+  padding: 24px !important;
+}
+.col-md-6 {
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+.form-control {
+  padding: 12px 4px 4px 16px;
+  border-radius: 8px;
+  border: 1px solid #747a7e;
+}
+.messgae {
+  padding-left: 0 !important;
+}
+label.form-check-label {
+  padding-left: 0 !important;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.submit.text-end {
+  padding-top: 0 !important;
+}
+.submit.text-end button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--color);
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: 0.3s;
+}
+.submit.text-end button:hover {
+  background-color: var(--color);
+  box-shadow: 0px 0px 15px 1px rgba(8, 43, 63, 0.5);
+}
+
+.form-check {
+  padding-left: 25px !important;
+}
+.get-us {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.title-get-us {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.title-get-us h3 {
+  color: #1b1e1f;
+  font-family: var(--font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  margin: 0;
+}
+.title-get-us span {
+  color: var(--color-one);
+  font-family: var(--font-family);
+  letter-spacing: 0.4px;
+}
+.get-direction {
+  display: flex;
+  gap: 16px;
+}
+.get-direction button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--color);
+  color: #fff;
+  border: unset;
+  width: 300px;
+}
+i.fa-solid.fa-diamond-turn-right {
+  font-size: 24px;
+}
+.get-direction button span {
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+input#place {
+  padding: 8px 0px 8px 16px;
+}
+.section-get-us {
+  padding: 16px 0 64px 0;
+}
+.get-direction button:hover {
+  background-color: var(--color);
+  box-shadow: 0px 0px 15px 1px rgba(8, 43, 63, 0.5);
+}
+iframe {
+  border-radius: 16px;
+  /* width: 100%; */
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+.form-control:focus {
+  border-color: #747a7e;
+}

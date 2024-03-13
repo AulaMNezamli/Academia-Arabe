@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses List</title>
+    <!-- Icon Title -->
+    <link
+      rel="icon"
+      href="images/Academia Árabe-Main Logo.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- intlTelInput -->
+    <link rel="stylesheet" href="build/css/intlTelInput.css" />
+    <link rel="stylesheet" href="build/css/intlTelInput.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/group-courses.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/fontawesome.min.js"></script>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <div class="overlay" id="overlay"></div>
+    <nav class="navbar navbar-expand-lg" id="navbar-navigation">
+      <div class="container">
+        <a class="navbar-brand m-0" href="home.html">
+          <img src="images/Academia Árabe-Main Logo.png" alt="logo" />
+          <span>Academia Arabe</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li
+              class="nav-item dropdown dropdown-mega position-static desktop"
+              id="drop"
+            >
+              <a
+                class="nav-link dropdown-toggle"
+                id="dropdown-menu-one-mobile"
+                href="#"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+              >
+                Courses
+                <i
+                  onclick="myFunction(this)"
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </a>
+              <div class="dropdown-menu shadow">
+                <div class="mega-content">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="course-one">
+                          <div class="course-one-box">
+                            <div class="course-one-img">
+                              <img
+                                src="images/Face to face-rafiki.png"
+                                alt="face"
+                              />
+                            </div>
+                            <div class="course-one-text">
+                              <span>Face-To-Face Courses</span>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur. Elit dui
+                                viverra
+                              </p>
+                              <a href="#" class="btn btn-outline-primary">
+                                View Courses
+                              </a>
+                            </div>
+                          </div>
+                          <div class="course-one-box" id="hybrid">
+                            <div class="course-one-img">
+                              <img
+                                src="images/Learning languages-rafiki.png"
+                                alt="languages"
+                              />
+                            </div>
+                            <div class="course-one-text">
+                              <span>Hybrid Courses</span>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur. Elit dui
+                                viverra
+                              </p>
+                              <a href="#" class="btn btn-outline-primary">
+                                View Courses
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="course-two">
+                          <div class="course-one-box">
+                            <div class="face-to-face-img">
+                              <img
+                                src="images/Online learning-rafiki.png"
+                                alt="face"
+                              />
+                            </div>
+                            <div class="course-one-text">
+                              <span>Online Courses</span>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur. Elit dui
+                                viverra
+                              </p>
+                              <a href="#" class="btn btn-outline-primary">
+                                View Courses
+                              </a>
+                            </div>
+                          </div>
+                          <div class="course-one-box" id="hybrid">
+                            <div class="face-to-face-img">
+                              <img
+                                src="images/Shared workspace-rafiki 1.png"
+                                alt="languages"
+                              />
+                            </div>
+                            <div class="course-one-text">
+                              <span>Companies Courses</span>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur. Elit dui
+                                viverra
+                              </p>
+                              <a href="#" class="btn btn-outline-primary">
+                                View Courses
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown" id="drop-one">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+                <i
+                  onclick="myFunction(this)"
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item li-first" href="research-center.html"
+                    >Research Center</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="cultural-advice.html"
+                    >Cultural Advice</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="translations.html"
+                    >Translations</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="content-review.html"
+                    >Content Review</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="writing.html"
+                    >Writing and Editing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="exam.html">Exam Preparation</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="digital.html"
+                    >Digital Publishing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="content.html"
+                    >Content Creation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="main-topic.html"
+                    >Main Topic 11</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item li-last" href="arabic-flavor.html"
+                    >Arabic Flavor</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown" id="drop-two">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About US
+                <i
+                  onclick="myFunction(this)"
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item li-first" href="academy.html"
+                    >The Academy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="philosophy.html"
+                    >Our Philosophy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Offer.html">What We Offer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="activities.html">Activities</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="teachers.html">Our Teachers</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="arabic-levels.html"
+                    >Arabic Levels</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="work-with-us.html"
+                    >Work With Us</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="links-interest.html"
+                    >Links of Interest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="facilities.html">Facilities</a>
+                </li>
+                <li>
+                  <a class="dropdown-item li-last" href="testimonials.html"
+                    >Testimonials</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="contact" href="contact.html">
+                <button class="btn btn-primary" type="submit">
+                  Contact Us
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <header>
+        <div id="mySidenav" class="sidenav" style="display: none">
+          <div class="mySidebar">
+            <div class="xmark position-relative">
+              <i class="fa-solid fa-xmark" onclick="closeNav()"></i>
+            </div>
+            <ul class="mysidenav-ul">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown" id="drop-one">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Courses
+                  <i
+                    onclick="myFunction(this)"
+                    class="fa-solid fa-chevron-down"
+                  ></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Face-To-Face Courses</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Hybrid Courses</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Online Courses</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Companies Courses</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown" id="drop-one">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                  <i
+                    onclick="myFunction(this)"
+                    class="fa-solid fa-chevron-down"
+                  ></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="research-center.html"
+                      >Research Center</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="cultural-advice.html"
+                      >Cultural Advice</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="translations.html"
+                      >Translations</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="content-review.html"
+                      >Content Review</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="writing.html"
+                      >Writing and Editing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="exam.html"
+                      >Exam Preparation</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="digital.html"
+                      >Digital Publishing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="content.html"
+                      >Content Creation</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="main-topic.html"
+                      >Main Topic 11</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="arabic-flavor.html"
+                      >Arabic Flavor</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item dropdown" id="drop-two">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About US
+                  <i
+                    onclick="myFunction(this)"
+                    class="fa-solid fa-chevron-down"
+                  ></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="academy.html">The Academy</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="philosophy.html"
+                      >Our Philosophy</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="Offer.html">What We Offer</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="activities.html"
+                      >Activities</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="teachers.html"
+                      >Our Teachers</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="arabic-levels.html"
+                      >Arabic Levels</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="work-with-us.html"
+                      >Work With Us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="links-interest.html"
+                      >Links of Interest</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="facilities.html"
+                      >Facilities</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="testimonials.html"
+                      >Testimonials</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="contact" href="contact.html">
+                  <button class="btn btn-primary" type="submit">
+                    Contact Us
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="menu-sidebar-icon" onclick="openNav()">
+          <button type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container">
+      <div class="home">
+        <a href="home.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="courses-list.html">Courses</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="courses-list.html">Face-To-Face</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="group-courses.html">Group Courses</a>
+      </div>
+    </div>
+
+    <div class="group-courses">
+      <div class="row">
+        <div class="col-md-8" id="col-md-8">
+          <div class="text-group-courses">
+            <h5>
+              Lorem ipsum dolor sit amet consectetur. Tortor mi massa Lorem
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Tortor mi massa Lorem
+              ipsum dolor sit amet consectetur. Tortor mi massa Lorem ipsum
+              dolor sit amet consectetur. Tortor mi massa
+            </p>
+            <div class="group-courses-details">
+              <div class="hours">
+                <img src="images/fi_clock.svg" alt="" />
+                <span>6 Month</span>
+              </div>
+              <div class="hours">
+                <img src="images/fi_bar-chart.svg" alt="" />
+                <span>Beginner</span>
+              </div>
+              <div class="hours">
+                <img src="images/fi_users.svg" alt="" />
+                <span>69,419,618</span>
+              </div>
+            </div>
+            <button onclick="scrollToSection()" class="btn btn-primary">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-fixed">
+            <div class="title-form-fixed">
+              <h5>Contact Us At</h5>
+              <span>Academia Árabe</span>
+            </div>
+            <form action="">
+              <div class="forminput" id="forminput">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Name and Surname"
+                />
+              </div>
+              <div class="forminput" id="forminput">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div
+                class="forminput d-flex"
+                style="flex-direction: column"
+                id="forminput"
+              >
+                <input
+                  placeholder="Phone"
+                  class="for1"
+                  type="tel"
+                  maxlength="40"
+                  size="20"
+                  pattern="[+]{0,1}[0-9]{8,13}"
+                  name="mobile"
+                  id="mobile"
+                  class="AutosubmitCalculator"
+                  value="+971"
+                  onkeypress="return AllowOnlyNumbers(event);"
+                />
+              </div>
+              <div class="messgae">
+                <textarea
+                  class="form-control"
+                  placeholder="Your Message"
+                  id="messgae"
+                  rows="6"
+                ></textarea>
+              </div>
+              <div class="form-check">
+                <div class="input-day">
+                  <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                </div>
+                <label class="form-check-label" for="flexCheckDefault">
+                  I have read and accept the <a href="#">privacy policy</a> and
+                  <a href="#">terms and conditions</a>.
+                </label>
+              </div>
+              <div class="submit">
+                <button type="submit">Contact Us</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-group-courses">
+      <div class="row">
+        <div class="col-md-8">
+          <div><img src="images/Trailer.png" alt="" /></div>
+
+          <div class="all-section-group-courses">
+            <div class="text-section-group-courses">
+              <h6>Lorem ipsum</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Viverra morbi blandit
+                massa urna sed. Cursus sit nunc dolor in a id at nulla. Quisque
+                eget vestibulum aliquam viverra sem ornare. Laoreet at id urna
+                metus pellentesque morbi id aliquam mi. Dolor at lacus neque
+                netus erat et vitae. Lacus lacinia morbi sed a adipiscing
+                ultricies iaculis. Eget interdum ipsum donec integer quam
+                ullamcorper purus egestas. Sit turpis in enim et in enim elit
+                ullamcorper. Viverra vel nibh integer amet elementum in bibendum
+                tortor massa. Donec sem arcu enim odio ut. Cras cras amet aenean
+                sed amet vulputate lectus. Elementum mauris ridiculus et in
+                pulvinar magna aenean nisl. Nisi sed facilisi risus urna nulla
+                tellus ultrices eget auctor. Odio et quis ac cursus at a.
+              </p>
+            </div>
+            <div class="div-three">
+              <h6>Lorem ipsum</h6>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="group-one" id="group-one">
+                    <img src="images/fi_check-circle.svg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Elit eget turpis
+                      vulputate posuere. Quis feugiat sed placerat
+                    </p>
+                  </div>
+                  <div class="group-one">
+                    <img src="images/fi_check-circle.svg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Elit eget turpis
+                      vulputate posuere. Quis feugiat sed placerat
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="group-one" id="group-one">
+                    <img src="images/fi_check-circle.svg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Elit eget turpis
+                      vulputate posuere. Quis feugiat sed placerat
+                    </p>
+                  </div>
+                  <div class="group-one">
+                    <img src="images/fi_check-circle.svg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Elit eget turpis
+                      vulputate posuere. Quis feugiat sed placerat
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="div-four">
+              <h6>Lorem ipsum</h6>
+              <div class="text-div-four">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>
+                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                  aliquam vel, lacinia quis ex.
+                </p>
+              </div>
+              <div class="text-div-four">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>
+                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                  aliquam vel, lacinia quis ex.
+                </p>
+              </div>
+              <div class="text-div-four">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>
+                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                  aliquam vel, lacinia quis ex.
+                </p>
+              </div>
+              <div class="text-div-four">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>
+                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                  aliquam vel, lacinia quis ex.
+                </p>
+              </div>
+            </div>
+            <div class="div-five">
+              <h6>Lorem ipsum</h6>
+              <ul>
+                <li>
+                  Nunc auctor consequat lorem, in posuere enim hendrerit sed.
+                </li>
+                <li>
+                  Sed sagittis suscipit condimentum pellentesque vulputate
+                  feugiat libero nec accumsan.
+                </li>
+                <li>
+                  Duis ornare enim ullamcorper congue consectetur suspendisse
+                  interdum tristique est sed molestie.
+                </li>
+                <li>
+                  Those who are looking to reboot their work life and try a new
+                  profession that is fun, rewarding and highly in-demand.
+                </li>
+                <li>Praesent eget consequat elit. Duis a pretium purus.</li>
+                <li>
+                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                  aliquam vel, lacinia quis ex.
+                </li>
+                <li>
+                  This course is for those who want to launch a Freelance Web
+                  Design career.
+                </li>
+              </ul>
+            </div>
+            <div class="div-six">
+              <h6>Lorem ipsum</h6>
+              <div class="table-wrapper text-center">
+                <table class="fl-table">
+                  <caption>
+                    The quarterly courses consist of 30 lessons throughout the
+                    entire quarter.
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th colspan="4">Label</th>
+                      <th colspan="4">Label</th>
+                    </tr>
+                    <tr>
+                      <th colspan="2">Label</th>
+                      <th colspan="2">Label</th>
+                      <th colspan="2">Label</th>
+                      <th colspan="2">Label</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4">Label</td>
+                      <td colspan="2">Label</td>
+                      <td colspan="2">Label</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                      </td>
+                      <td colspan="2">
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                      </td>
+                      <td colspan="2">
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">Label</td>
+                      <td colspan="2">Label</td>
+                      <td colspan="2">Label</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                      </td>
+                      <td colspan="2">
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                      </td>
+                      <td colspan="2">
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                        <div>Label</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="div-seven" id="mySection">
+              <h5>Pricing Plans</h5>
+              <div class="row" id="div-seven">
+                <div class="col-md-6">
+                  <div class="card-div-seven" id="card-div-seven-one">
+                    <div class="header-card-seven">
+                      <h6>Lorem Ipsum</h6>
+                      <span>Lorem Ipsum</span>
+                    </div>
+                    <div class="number-card">
+                      <span>€790</span>
+                    </div>
+                    <div class="body-card-seven">
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                    </div>
+                    <div class="buy-now">
+                      <button
+                        onclick="window.location.href='registration.html'"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-div-seven" id="card-div-seven">
+                    <div class="header-card-seven">
+                      <h6>Lorem Ipsum</h6>
+                      <span>Lorem Ipsum</span>
+                    </div>
+                    <div class="number-card">
+                      <span>€790</span>
+                      <span class="discount">€200</span>
+                    </div>
+                    <div class="body-card-seven">
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div class="text-body-card-seven">
+                        <img src="images/fi_check-circle.svg" alt="" />
+                        <span>Lorem Ipsum</span>
+                      </div>
+                    </div>
+                    <div class="buy-now">
+                      <button
+                        onclick="window.location.href='registration.html'"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </section>
+
+    <section class="section-group-courses-one">
+      <h5>Related Courses</h5>
+      <div class="slider-three owl-carousel">
+        <!-- Add your slider items here -->
+        <div class="slider-item">
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rectangle 7.png"
+              class="card-img-top"
+              alt="rectangle"
+            />
+            <div class="card-body">
+              <span class="card-title">Face-To-Face</span>
+              <div class="cost">
+                <span>€7900</span>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Tortor mi massa
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rectangle 7.png"
+              class="card-img-top"
+              alt="rectangle"
+            />
+            <div class="card-body">
+              <span class="card-title">Face-To-Face</span>
+              <div class="cost">
+                <span>€7900</span>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Tortor mi massa
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rectangle 7.png"
+              class="card-img-top"
+              alt="rectangle"
+            />
+            <div class="card-body">
+              <span class="card-title">Face-To-Face</span>
+              <div class="cost">
+                <span>€7900</span>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Tortor mi massa
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rectangle 7.png"
+              class="card-img-top"
+              alt="rectangle"
+            />
+            <div class="card-body">
+              <span class="card-title">Face-To-Face</span>
+              <div class="cost">
+                <span>€7900</span>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Tortor mi massa
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rectangle 7.png"
+              class="card-img-top"
+              alt="rectangle"
+            />
+            <div class="card-body">
+              <span class="card-title">Face-To-Face</span>
+              <div class="cost">
+                <span>€7900</span>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Tortor mi massa
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rectangle 7.png"
+              class="card-img-top"
+              alt="rectangle"
+            />
+            <div class="card-body">
+              <span class="card-title">Face-To-Face</span>
+              <div class="cost">
+                <span>€7900</span>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Tortor mi massa
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... Add more items as needed ... -->
+      </div>
+    </section>
+
+    <section class="asked-questions">
+      <h5>Frequently Asked Questions</h5>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Lorem Ipsum
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur. Tellus aliquet et amet
+              bibendum ut cursus at tortor laoreet. Risus dui arcu at sed vitae
+              nulla mauris.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Lorem Ipsum
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur. Tellus aliquet et amet
+              bibendum ut cursus at tortor laoreet. Risus dui arcu at sed vitae
+              nulla mauris.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Lorem Ipsum
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur. Tellus aliquet et amet
+              bibendum ut cursus at tortor laoreet. Risus dui arcu at sed vitae
+              nulla mauris.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsefour"
+              aria-expanded="false"
+              aria-controls="collapsefour"
+            >
+              Lorem Ipsum
+            </button>
+          </h2>
+          <div
+            id="collapsefour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur. Tellus aliquet et amet
+              bibendum ut cursus at tortor laoreet. Risus dui arcu at sed vitae
+              nulla mauris.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsefive"
+              aria-expanded="false"
+              aria-controls="collapsefive"
+            >
+              Lorem Ipsum
+            </button>
+          </h2>
+          <div
+            id="collapsefive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur. Tellus aliquet et amet
+              bibendum ut cursus at tortor laoreet. Risus dui arcu at sed vitae
+              nulla mauris.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Start Our Blog -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="title-blog">
+          <h3>Read Our Blog</h3>
+          <a href="blog.html">
+            <button>View More</button>
+          </a>
+        </div>
+        <div class="section text-center">
+          <div class="slider owl-carousel" id="owl-carousel">
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="card-blog">
+              <a href="offer.html">
+                <img src="images/null.png" class="card-img" alt="rectangle" />
+                <div class="card-blog-body">
+                  <span class="card-title-blog">Face-To-Face Courses</span>
+
+                  <p class="card-blog-text">
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                    Lorem ipsum dolor sit amet consectetur. Elit dui viverra
+                  </p>
+                  <button>
+                    Read More
+                    <i
+                      class="fa-solid fa-angles-right"
+                      style="color: #0b3954"
+                    ></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="slider-counter">
+            <i
+              class="fas fa-chevron-left arrow-icon"
+              onclick="prevSlide('carousel2')"
+            ></i>
+            <span id="currentSlide2">01</span> /
+            <span class="total-slides"></span>
+            <i
+              class="fas fa-chevron-right arrow-icon"
+              onclick="nextSlide('carousel2')"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Our Blog -->
+
+    <!-- Start Our Students Section -->
+    <section class="our-students">
+      <h3>What Our Students Say About Us</h3>
+
+      <div class="section1 text-center">
+        <div class="slider-one owl-carousel">
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="google">
+              <img src="images/38.svg" alt="" />
+            </div>
+            <img class="up" src="images/up.png" alt="" />
+            <p class="p-item">
+              Lorem ipsum dolor sit amet consectetur. Ornare volutpat in
+              bibendum risus euismod suscipit leo sed et. Adipiscing id
+              elementum lacus posuere imperdiet nulla. Nunc felis eget mauris
+              dignissim. Congue vel ac volutpat vestibulum euismod congue. Netus
+              sapien duis imperdiet at tellus sed id dolor. Dictum mi vitae
+              convallis viverra sit quam libero amet augue. Accumsan tellus orci
+              netus eu proin elementum cras metus felis. Ultrices ut elit
+              pretium ultrices leo est porta tortor euismod. Et rhoncus
+              vestibulum turpis morbi eget.
+            </p>
+            <img class="down" src="images/down.png" alt="" />
+
+            <img class="img-item" src="images/Ellipse 185.png" width="72px" />
+            <span>User Name</span>
+            <div class="icons">
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #eebd11; font-size: 15px"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="slider-counter-one" id="counter2">
+          <i
+            class="fas fa-chevron-left arrow-icon"
+            onclick="prevSlide('carousel2')"
+          ></i>
+          <span id="currentSlide2">01</span> /
+          <span class="total-slides"></span>
+          <i
+            class="fas fa-chevron-right arrow-icon"
+            onclick="nextSlide('carousel2')"
+          ></i>
+        </div>
+        <button
+          class="blog-button"
+          onclick="window.location.href = 'blog.html'"
+        >
+          View All
+        </button>
+      </div>
+    </section>
+    <!-- End Our Students Section -->
+    <!-- Start Footer -->
+
+    <footer>
+      <div class="container p-0">
+        <div class="footer-section" id="footer-section-desktop">
+          <div class="section-one">
+            <div class="footer-title">
+              <h6>Our Courses</h6>
+              <ul>
+                <li><a href="courses.html">Face-To-Face Courses</a></li>
+                <li><a href="courses.html">Online Courses</a></li>
+                <li><a href="courses.html">Hybrid Courses</a></li>
+                <li><a href="courses.html">Companies Courses</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="section-two">
+            <h6>Our Services</h6>
+
+            <div class="footer-title" id="section-two">
+              <ul>
+                <li><a href="research-center.html">Research Center</a></li>
+                <li><a href="cultural-advice.html">Cultural Advice</a></li>
+                <li><a href="translations.html">Translations</a></li>
+                <li><a href="content-review.html">Content Review</a></li>
+                <li><a href="writing.html">Writing and Editing</a></li>
+              </ul>
+              <ul>
+                <li><a href="exam.html">Exam Preparation</a></li>
+                <li><a href="digital.html">Digital Publishing</a></li>
+                <li><a href="content.html">Content Creation</a></li>
+                <li><a href="main-topic.html">Main Topic 11</a></li>
+                <li><a href="arabic-flavor.html">Arabic Flavor</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="section-three">
+            <h6>About Us</h6>
+
+            <div class="footer-title" id="section-three">
+              <ul>
+                <li><a href="academy.html">The Academy</a></li>
+                <li><a href="philosophy.html">Our Philosophy</a></li>
+                <li><a href="offer.html">What We Offer</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="teachers.html">Our Teachers</a></li>
+              </ul>
+              <ul>
+                <li><a href="arabic-levels.html">Arabic Levels</a></li>
+                <li><a href="work-with-us.html">Work With Us</a></li>
+                <li><a href="links-interest.html">Links of Interest</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="section-four">
+            <div class="footer-title" id="footer-title">
+              <h6>Contact Us</h6>
+              <ul>
+                <li>
+                  <img src="images/fi_home.png" alt="fi_home" />
+                  4074 Ebert Summit Suite 375
+                </li>
+                <li>
+                  <img src="images/fi_mail.png" alt="fi_mail" />
+                  <a href="mailto:example@teamwebflow.com"
+                    >example@teamwebflow.com</a
+                  >
+                </li>
+                <li>
+                  <img src="images/fi_phone.png" alt="fi_phone" />
+                  <a href="tel:+44 123 654 7890">+44 123 654 7890</a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <img
+                      src="images/instagram-svgrepo-com.svg"
+                      alt="instagram"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="images/facebook-svgrepo-com (1).svg"
+                      alt="facebook"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="images/linkedin-svgrepo-com.svg" alt="linkedin" />
+                  </a>
+                  <a href="#">
+                    <img src="images/youtube-svgrepo-com.svg" alt="youtube" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section-one d-none">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="section-two">
+                  <h6>Our Services</h6>
+                  <div class="footer-title" id="section-two">
+                    <ul>
+                      <li>
+                        <a href="research-center.html">Research Center</a>
+                      </li>
+                      <li>
+                        <a href="cultural-advice.html">Cultural Advice</a>
+                      </li>
+                      <li><a href="translations.html">Translations</a></li>
+                      <li><a href="content-review.html">Content Review</a></li>
+                      <li><a href="writing.html">Writing and Editing</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="exam.html">Exam Preparation</a></li>
+                      <li><a href="digital.html">Digital Publishing</a></li>
+                      <li><a href="content.html">Content Creation</a></li>
+                      <li><a href="main-topic.html">Main Topic 11</a></li>
+                      <li><a href="arabic-flavor.html">Arabic Flavor</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="section-three">
+                  <h6>About Us</h6>
+
+                  <div class="footer-title" id="section-three">
+                    <ul>
+                      <li><a href="academy.html">The Academy</a></li>
+                      <li><a href="philosophy.html">Our Philosophy</a></li>
+                      <li><a href="offer.html">What We Offer</a></li>
+                      <li><a href="activities.html">Activities</a></li>
+                      <li><a href="teachers.html">Our Teachers</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="arabic-levels.html">Arabic Levels</a></li>
+                      <li><a href="work-with-us.html">Work With Us</a></li>
+                      <li>
+                        <a href="links-interest.html">Links of Interest</a>
+                      </li>
+                      <li><a href="facilities.html">Facilities</a></li>
+                      <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="footer-mobile">
+              <div class="col-md-6">
+                <div class="section-one">
+                  <h6>Our Courses</h6>
+                  <div class="footer-title" id="section-one">
+                    <ul>
+                      <li><a href="courses.html">Face-To-Face Courses</a></li>
+                      <li><a href="courses.html">Online Courses</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="courses.html">Hybrid Courses</a></li>
+                      <li><a href="courses.html">Companies Courses</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="section-four">
+                  <h6>Contact Us</h6>
+                  <div class="footer-title" id="section-four">
+                    <ul>
+                      <li>
+                        <img src="images/fi_home.png" alt="fi_home" />
+                        4074 Ebert Summit Suite 375
+                      </li>
+                      <li>
+                        <img src="images/fi_mail.png" alt="fi_mail" />
+                        <a href="mailto:example@teamwebflow.com"
+                          >example@teamwebflow.com</a
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="images/fi_phone.png" alt="fi_phone" />
+                        <a href="tel:+44 123 654 7890">+44 123 654 7890</a>
+                      </li>
+                      <li class="social">
+                        <a href="#">
+                          <img
+                            src="images/instagram-svgrepo-com.svg"
+                            alt="instagram"
+                          />
+                        </a>
+                        <a href="#">
+                          <img
+                            src="images/facebook-svgrepo-com (1).svg"
+                            alt="facebook"
+                          />
+                        </a>
+                        <a href="#">
+                          <img
+                            src="images/linkedin-svgrepo-com.svg"
+                            alt="linkedin"
+                          />
+                        </a>
+                        <a href="#">
+                          <img
+                            src="images/youtube-svgrepo-com.svg"
+                            alt="youtube"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="footer-end">
+          <span><a href="#">Terms and conditions</a></span>
+          <span><a href="#">Legal warning</a></span>
+          <span><a href="#">Privacy and cookie policy</a></span>
+          <span class="year">
+            All Right Reserved
+            <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Carousel -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- intlTelInput -->
+    <script src="build/js/intlTelInput.min.js"></script>
+    <script src="build/js/intlTelInput.js"></script>
+    <script>
+      const input = document.querySelector("#mobile");
+      window.intlTelInput(input, {
+        initialCountry: "us",
+        showSelectedDialCode: true,
+        utilsScript: "/intl-tel-input/js/utils.js?1708621744742",
+      });
+    </script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Js File -->
+    <script src="js/group-courses.js"></script>
+  </body>
+</html>

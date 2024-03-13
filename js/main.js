@@ -57,7 +57,7 @@ function showTabsContent(b) {
 
 // ===================================================================
 
-$(".slider-one")
+$("#slider-one")
   .on("initialized.owl.carousel changed.owl.carousel", function (e) {
     if (!e.namespace) {
       return;
@@ -93,7 +93,7 @@ $(".slider-one")
 
 // ===================================================================
 
-$(".slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
+$("#slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
   if (!e.namespace) {
     return;
   }
@@ -104,7 +104,7 @@ $(".slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
       carousel.items().length.toString().padStart(2, "0")
   );
 });
-$(".owl-carousel").owlCarousel({
+$("#slider").owlCarousel({
   loop: false,
   margin: 24,
   nav: true,
@@ -151,3 +151,131 @@ overlay.onclick = (_) => {
   overlay.style.display = "none";
   document.body.style.overflowY = "auto";
 };
+// ===================================================================
+
+let tabOne = document.getElementById("tab-one");
+let tabTwo = document.getElementById("tab-two");
+let tabThree = document.getElementById("tab-three");
+let tabFour = document.getElementById("tab-four");
+let myCarouselOne = document.getElementById("my-carousel-one");
+let myCarouselTwo = document.getElementById("my-carousel-two");
+let myCarouselThree = document.getElementById("my-carousel-three");
+let myCarouselFour = document.getElementById("my-carousel-four");
+
+tabOne.addEventListener("click", function () {
+  hideAllCarousels();
+  myCarouselOne.style.display = "block";
+});
+
+tabTwo.addEventListener("click", function () {
+  hideAllCarousels();
+  myCarouselTwo.style.display = "block";
+});
+
+tabThree.addEventListener("click", function () {
+  hideAllCarousels();
+  myCarouselThree.style.display = "block";
+});
+
+tabFour.addEventListener("click", function () {
+  hideAllCarousels();
+  myCarouselFour.style.display = "block";
+});
+
+function hideAllCarousels() {
+  myCarouselOne.style.display = "none";
+  myCarouselTwo.style.display = "none";
+  myCarouselThree.style.display = "none";
+  myCarouselFour.style.display = "none";
+}
+
+let tabs = document.querySelectorAll(".tab-mobile");
+let tabContents = document.querySelectorAll(".tabContent-mobile");
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+    tabContents.forEach((content) => content.classList.remove("active"));
+    tabContents[index].classList.add("active");
+  });
+});
+$("#tabs-mobile").owlCarousel({
+  loop: false,
+  margin: 0,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1.25,
+    },
+    600: {
+      items: 2.5,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
+$("#my-carousel-one").owlCarousel({
+  loop: false,
+  margin: 24,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1.25,
+    },
+    600: {
+      items: 2.5,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
+$("#my-carousel-two").owlCarousel({
+  loop: false,
+  margin: 24,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1.25,
+    },
+    600: {
+      items: 2.5,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
+$("#my-carousel-three").owlCarousel({
+  loop: false,
+  margin: 24,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1.25,
+    },
+    600: {
+      items: 2.5,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
+$("#my-carousel-four").owlCarousel({
+  loop: false,
+  margin: 24,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1.25,
+    },
+    600: {
+      items: 2.5,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
