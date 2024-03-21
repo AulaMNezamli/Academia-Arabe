@@ -28,6 +28,8 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/aboutus.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/arabic-levels.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -65,9 +67,7 @@
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
             </li>
             <li
               class="nav-item dropdown dropdown-mega position-static desktop"
@@ -105,7 +105,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -123,7 +126,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -145,7 +151,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -163,7 +172,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -245,7 +257,7 @@
             </li>
             <li class="nav-item dropdown" id="drop-two">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link active dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -320,7 +332,7 @@
             </div>
             <ul class="mysidenav-ul">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html"
+                <a class="nav-link" aria-current="page" href="home.html"
                   >Home</a
                 >
               </li>
@@ -339,19 +351,27 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Face-To-Face Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Face-To-Face Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Hybrid Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Hybrid Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Online Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Online Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Companies Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Companies Courses</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -428,7 +448,7 @@
               </li>
               <li class="nav-item dropdown" id="drop-two">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link active dropdown-toggle"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -439,7 +459,7 @@
                     class="fa-solid fa-chevron-down"
                   ></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="about-us">
                   <li>
                     <a class="dropdown-item" href="academy.html">The Academy</a>
                   </li>
@@ -510,8 +530,6 @@
 
     <!-- Start Hero Section -->
     <div class="hero-section">
-      <!-- <img src="../images/Hero Section.png" width="100%" /> -->
-
       <div class="title-aboutus">
         <h2>About Us</h2>
         <p>
@@ -528,7 +546,7 @@
       <div class="container" id="container">
         <div class="row">
           <div class="col-md-3">
-            <div class="about">
+            <div class="about" id="about-desktop">
               <button onclick="window.location.href='academy.html'">
                 The Academy
               </button>
@@ -566,18 +584,67 @@
           </div>
           <div class="col-md-9">
             <div class="all-arabic-levels">
+              <button id="filterButton">
+                <img src="images/Icon-about.svg" alt="" />
+                <span>Arabic Levels</span>
+              </button>
+              <div id="filterModal" class="modal">
+                <div class="modal-content">
+                  <div class="title-filter-modal">
+                    <h4>About Us</h4>
+                    <i class="fa-solid fa-xmark" id="close"></i>
+                  </div>
+                  <div class="about">
+                    <button onclick="window.location.href='academy.html'">
+                      The Academy
+                    </button>
+                    <button onclick="window.location.href='philosophy.html'">
+                      Our Philosophy
+                    </button>
+                    <button onclick="window.location.href='offer.html'">
+                      What We Offer
+                    </button>
+                    <button onclick="window.location.href='activities.html'">
+                      Activities
+                    </button>
+                    <button onclick="window.location.href='teachers.html'">
+                      Our Teachers
+                    </button>
+                    <button
+                      class="active"
+                      onclick="window.location.href='arabic-levels.html'"
+                    >
+                      Arabic Levels
+                    </button>
+                    <button onclick="window.location.href='facilities.html'">
+                      Facilities
+                    </button>
+                    <button onclick="window.location.href='testimonials.html'">
+                      Testimonials
+                    </button>
+                    <button onclick="window.location.href='work-with-us.html'">
+                      Work With Us
+                    </button>
+                    <button
+                      onclick="window.location.href='links-interest.html'"
+                    >
+                      Links of Interest
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div class="text-content" id="activities-text">
                 <h4>Arabic Levels</h4>
               </div>
-              <div class="row">
-                <div class="arabic-levels">
+              <div class="row-arabic-levels">
+                <div class="row" id="row-arabic-levels">
                   <div class="col-md-6">
                     <div class="group-arabic-levels">
                       <span>A1 (beginner)</span>
                       <p>
                         Lorem ipsum dolor sit amet consectetur. Sodales in
-                        elementum nisl ultricies morbi mauris. Dictum donec
-                        ornare tellus pellentesque aenean.
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
                       </p>
                     </div>
                   </div>
@@ -586,22 +653,20 @@
                       <span>A2 (Initial)</span>
                       <p>
                         Lorem ipsum dolor sit amet consectetur. Sodales in
-                        elementum nisl ultricies morbi mauris. Dictum donec
-                        ornare tellus pellentesque aenean.
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="arabic-levels">
+                <div class="row" id="row-arabic-levels">
                   <div class="col-md-6">
                     <div class="group-arabic-levels">
                       <span>B1 (intermediate)</span>
                       <p>
                         Lorem ipsum dolor sit amet consectetur. Sodales in
-                        elementum nisl ultricies morbi mauris. Dictum donec
-                        ornare tellus pellentesque aenean.
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
                       </p>
                     </div>
                   </div>
@@ -610,22 +675,20 @@
                       <span>B2 (Upper Intermediate)</span>
                       <p>
                         Lorem ipsum dolor sit amet consectetur. Sodales in
-                        elementum nisl ultricies morbi mauris. Dictum donec
-                        ornare tellus pellentesque aenean.
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="arabic-levels">
+                <div class="row" id="row-arabic-levels">
                   <div class="col-md-6">
                     <div class="group-arabic-levels">
                       <span>C1 (Advanced)</span>
                       <p>
                         Lorem ipsum dolor sit amet consectetur. Sodales in
-                        elementum nisl ultricies morbi mauris. Dictum donec
-                        ornare tellus pellentesque aenean.
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
                       </p>
                     </div>
                   </div>
@@ -634,22 +697,22 @@
                       <span>C2 (Master)</span>
                       <p>
                         Lorem ipsum dolor sit amet consectetur. Sodales in
-                        elementum nisl ultricies morbi mauris. Dictum donec
-                        ornare tellus pellentesque aenean.
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="group-arabic-levels" id="last-arabic">
-                    <span>CONVERSATION</span>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Sodales in
-                      elementum nisl ultricies morbi mauris. Dictum donec ornare
-                      tellus pellentesque aenean.
-                    </p>
+                <div class="row" id="row-arabic-levels">
+                  <div class="col-md-12">
+                    <div class="group-arabic-levels" id="last-arabic">
+                      <span>CONVERSATION</span>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur. Sodales in
+                        elementum nisl ultricies morbi mauris. Dictum donec ornare
+                        tellus pellentesque aenean.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -662,7 +725,6 @@
     <!-- End academy-section -->
 
     <!-- Start Footer -->
-
     <footer>
       <div class="container p-0">
         <div class="footer-section" id="footer-section-desktop">
@@ -670,10 +732,12 @@
             <div class="footer-title">
               <h6>Our Courses</h6>
               <ul>
-                <li><a href="courses.html">Face-To-Face Courses</a></li>
-                <li><a href="courses.html">Online Courses</a></li>
-                <li><a href="courses.html">Hybrid Courses</a></li>
-                <li><a href="courses.html">Companies Courses</a></li>
+                <li class="li-one">
+                  <a href="courses-list.html">Face-To-Face Courses</a>
+                </li>
+                <li><a href="courses-list.html">Online Courses</a></li>
+                <li><a href="courses-list.html">Hybrid Courses</a></li>
+                <li><a href="courses-list.html">Companies Courses</a></li>
               </ul>
             </div>
           </div>
@@ -721,7 +785,7 @@
             <div class="footer-title" id="footer-title">
               <h6>Contact Us</h6>
               <ul>
-                <li>
+                <li class="li-one">
                   <img src="images/fi_home.png" alt="fi_home" />
                   4074 Ebert Summit Suite 375
                 </li>
@@ -761,9 +825,9 @@
         </div>
 
         <div class="footer-section-one d-none">
-          <div class="container">
+          <div class="container" id="footer-section-one">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-two">
                   <h6>Our Services</h6>
                   <div class="footer-title" id="section-two">
@@ -788,7 +852,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-three">
                   <h6>About Us</h6>
 
@@ -814,22 +878,24 @@
               </div>
             </div>
             <div class="row" id="footer-mobile">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-one">
                   <h6>Our Courses</h6>
                   <div class="footer-title" id="section-one">
                     <ul>
-                      <li><a href="courses.html">Face-To-Face Courses</a></li>
-                      <li><a href="courses.html">Online Courses</a></li>
+                      <li>
+                        <a href="courses-list.html">Face-To-Face Courses</a>
+                      </li>
+                      <li><a href="courses-list.html">Online Courses</a></li>
                     </ul>
                     <ul>
-                      <li><a href="courses.html">Hybrid Courses</a></li>
-                      <li><a href="courses.html">Companies Courses</a></li>
+                      <li><a href="courses-list.html">Hybrid Courses</a></li>
+                      <li><a href="courses-list.html">Companies Courses</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-four">
                   <h6>Contact Us</h6>
                   <div class="footer-title" id="section-four">
@@ -848,7 +914,9 @@
                     <ul>
                       <li>
                         <img src="images/fi_phone.png" alt="fi_phone" />
-                        <a href="tel:+44 123 654 7890">+44 123 654 7890</a>
+                        <a href="tel:+44 123 654 7890" id="phone"
+                          >+44 123 654 7890</a
+                        >
                       </li>
                       <li class="social">
                         <a href="#">
@@ -898,7 +966,9 @@
         </div>
       </div>
     </footer>
-
+    <div class="button-contact-us d-none">
+      <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </div>
     <!-- End Footer -->
 
     <!-- Bootstrap -->
@@ -910,5 +980,6 @@
 
     <!-- Js File -->
     <script src="js/aboutus.js"></script>
+    <script src="js/services.js"></script>
   </body>
 </html>

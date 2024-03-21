@@ -15,7 +15,7 @@ section {
   gap: 16px;
 }
 .form-registration h5 {
-  color: #1b1e1f;
+  color: var(--color-b);
   font-family: var(--font-family);
   font-size: 24px;
   font-weight: 700;
@@ -60,7 +60,7 @@ section.successfully {
   margin: auto;
 }
 .text-successfully h3 {
-  color: #1b1e1f;
+  color: var(--color-b);
   font-family: var(--font-family);
   font-size: 48px;
   font-weight: 700;
@@ -76,4 +76,24 @@ section.successfully {
 }
 .button-successfully button {
   border: unset;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 48px 16px;
+  }
+  .text-successfully {
+    width: auto;
+  }
+  .text-successfully h3 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 575px){
+  section.successfully {
+    background-image: unset;
+  }
+  .registered-successfully {
+    gap: 48px;
+  }
 }

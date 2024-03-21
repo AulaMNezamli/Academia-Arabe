@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration</title>
+    <title>Bank Wire</title>
     <!-- Icon Title -->
     <link
       rel="icon"
@@ -80,7 +80,9 @@
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Home</a
+              >
             </li>
             <li
               class="nav-item dropdown dropdown-mega position-static desktop"
@@ -118,7 +120,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -136,7 +141,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -158,7 +166,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -176,7 +187,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -352,19 +366,27 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Face-To-Face Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Face-To-Face Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Hybrid Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Hybrid Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Online Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Online Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Companies Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Companies Courses</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -452,7 +474,7 @@
                     class="fa-solid fa-chevron-down"
                   ></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="about-us">
                   <li>
                     <a class="dropdown-item" href="academy.html">The Academy</a>
                   </li>
@@ -520,11 +542,10 @@
       </header>
     </nav>
     <!-- End Navbar -->
-
     <section>
       <div class="container">
         <div class="row" id="row">
-          <div class="col-md-5" id="col-md-5">
+          <div  class="col-lg-5 col-md-12" id="col-lg-5">
             <div class="text-registration">
               <h3>Registration Form</h3>
               <p>
@@ -533,13 +554,13 @@
               </p>
             </div>
           </div>
-          <div class="col-md-7" id="col-md-7">
+          <div class="col-lg-7 col-md-12" id="col-lg-7">
             <div class="form-registration" id="step1">
               <h5>Step 1/3</h5>
               <h6>Information</h6>
               <div class="form-container">
-                <div class="row">
-                  <div class="col-md-6">
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
                     <div class="forminput" id="forminput">
                       <label for="name" class="form-label"
                         >Name and Surname</label
@@ -552,7 +573,7 @@
                       />
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-xl-6 col-lg-12">
                     <div class="forminput" id="forminput">
                       <label for="email" class="form-label">Email</label>
                       <input
@@ -565,8 +586,8 @@
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-6">
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
                     <div
                       class="forminput d-flex"
                       style="flex-direction: column"
@@ -588,7 +609,7 @@
                       />
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-xxl-6 col-xl-6">
                     <div class="forminput" id="forminput">
                       <label for="country" class="form-label">Country</label>
                       <div class="tt-select">
@@ -602,8 +623,8 @@
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-6">
+                <div class="row" id="gender">
+                  <div class="col-xl-12 col-lg-12">
                     <div class="forminput">
                       <label for="gender" class="form-label">Gender</label>
                       <div class="tt-select">
@@ -624,26 +645,26 @@
                     </div>
                   </div>
 
-                  <div class="col-md-6">
+                  <div class="col-xxl-6 col-xl-12 col-lg-12">
                     <label for="date-of-birth" class="form-label"
                       >Date of Birth</label
                     >
                     <div class="row">
-                      <div class="col-md-4">
+                      <div class="col-md-4 col-4">
                         <div class="form-day">
                           <select id="day">
                             <option value="">Day</option>
                           </select>
                         </div>
                       </div>
-                      <div class="col-md-4" id="col-md-4">
+                      <div class="col-md-4 col-4" id="col-md-4">
                         <div class="form-month">
                           <select id="month">
                             <option value="">Month</option>
                           </select>
                         </div>
                       </div>
-                      <div class="col-md-4" id="col-md-4-year">
+                      <div class="col-md-4 col-4" id="col-md-4-year">
                         <div class="form-year">
                           <select id="year">
                             <option value="">Year</option>
@@ -654,16 +675,20 @@
                   </div>
                 </div>
               </div>
-              <div class="next-step">
-                <button id="nextStep">Next Step</button>
+              <div class="row">
+                <div class="col-12">
+                  <div class="next-step">
+                    <button id="nextStep">Next Step</button>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="form-registration" id="step2" style="display: none">
               <h5>Step 2/3</h5>
               <h6>Course Details</h6>
               <div class="form-container">
-                <div class="row">
-                  <div class="col-md-6">
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
                     <div class="forminput" id="forminput">
                       <label for="course" class="form-label">Course</label>
                       <div class="tt-select">
@@ -677,7 +702,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-xl-6 col-lg-12">
                     <div class="forminput" id="formprice">
                       <label for="price" class="form-label">Price</label>
                       <span>€790</span>
@@ -685,8 +710,8 @@
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-6">
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
                     <div class="forminput" id="forminput">
                       <label for="preferred" class="form-label"
                         >Preferred Time</label
@@ -704,7 +729,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-xxl-6 col-xl-6">
                     <div class="forminput" id="forminput">
                       <label for="alternative" class="form-label"
                         >Alternative Time</label
@@ -724,8 +749,27 @@
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-12">
+                <div class="row" id="gender">
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="preferred" class="form-label"
+                        >Preferred Time</label
+                      >
+                      <div class="tt-select">
+                        <select id="preferred" class="form-select">
+                          <option selected disabled>
+                            Choose your preferred time
+                          </option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xxl-6 col-xl-12 col-lg-12">
                     <div class="forminput" id="forminput">
                       <label for="alternative" class="form-label"
                         >Knowledge of Arabic</label
@@ -746,15 +790,23 @@
                   </div>
                 </div>
               </div>
-              <div class="button-form">
-                <div class="next-step" id="next-step2">
-                  <button id="nextStep2">Next Step</button>
-                </div>
-                <div class="previous-step" id="previous-step">
-                  <button id="previousstep">
-                    <img src="images/fi_arrow-left.svg" alt="" />
-                    Previous Step
-                  </button>
+              <div class="row">
+                <div class="col-12">
+                  <div class="button-form">
+                    <div class="next-step" id="next-step2">
+                      <button id="nextStep2">Next Step</button>
+                    </div>
+                    <div class="previous-step" id="previous-step">
+                      <button id="previousstep desktop">
+                        <img src="images/fi_arrow-left.svg" alt="" />
+                        Previous Step
+                      </button>
+                      <button class="d-none previous-mobile" id="previousstep">
+                        <img src="images/fi_arrow-left.svg" alt="" />
+                        Previous
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -836,6 +888,10 @@
                     <img src="images/fi_arrow-left.svg" alt="" />
                     Previous Step
                   </button>
+                  <button class="d-none previous-mobile" id="previousstep">
+                    <img src="images/fi_arrow-left.svg" alt="" />
+                    Previous
+                  </button>
                 </div>
               </div>
             </div>
@@ -843,7 +899,6 @@
         </div>
       </div>
     </section>
-
     <!-- Start Footer -->
     <footer>
       <div class="container p-0">
@@ -852,10 +907,12 @@
             <div class="footer-title">
               <h6>Our Courses</h6>
               <ul>
-                <li><a href="courses.html">Face-To-Face Courses</a></li>
-                <li><a href="courses.html">Online Courses</a></li>
-                <li><a href="courses.html">Hybrid Courses</a></li>
-                <li><a href="courses.html">Companies Courses</a></li>
+                <li class="li-one">
+                  <a href="courses-list.html">Face-To-Face Courses</a>
+                </li>
+                <li><a href="courses-list.html">Online Courses</a></li>
+                <li><a href="courses-list.html">Hybrid Courses</a></li>
+                <li><a href="courses-list.html">Companies Courses</a></li>
               </ul>
             </div>
           </div>
@@ -903,7 +960,7 @@
             <div class="footer-title" id="footer-title">
               <h6>Contact Us</h6>
               <ul>
-                <li>
+                <li class="li-one">
                   <img src="images/fi_home.png" alt="fi_home" />
                   4074 Ebert Summit Suite 375
                 </li>
@@ -943,9 +1000,9 @@
         </div>
 
         <div class="footer-section-one d-none">
-          <div class="container">
+          <div class="container" id="footer-section-one">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-two">
                   <h6>Our Services</h6>
                   <div class="footer-title" id="section-two">
@@ -970,7 +1027,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-three">
                   <h6>About Us</h6>
 
@@ -996,22 +1053,24 @@
               </div>
             </div>
             <div class="row" id="footer-mobile">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-one">
                   <h6>Our Courses</h6>
                   <div class="footer-title" id="section-one">
                     <ul>
-                      <li><a href="courses.html">Face-To-Face Courses</a></li>
-                      <li><a href="courses.html">Online Courses</a></li>
+                      <li>
+                        <a href="courses-list.html">Face-To-Face Courses</a>
+                      </li>
+                      <li><a href="courses-list.html">Online Courses</a></li>
                     </ul>
                     <ul>
-                      <li><a href="courses.html">Hybrid Courses</a></li>
-                      <li><a href="courses.html">Companies Courses</a></li>
+                      <li><a href="courses-list.html">Hybrid Courses</a></li>
+                      <li><a href="courses-list.html">Companies Courses</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-four">
                   <h6>Contact Us</h6>
                   <div class="footer-title" id="section-four">
@@ -1030,7 +1089,9 @@
                     <ul>
                       <li>
                         <img src="images/fi_phone.png" alt="fi_phone" />
-                        <a href="tel:+44 123 654 7890">+44 123 654 7890</a>
+                        <a href="tel:+44 123 654 7890" id="phone"
+                          >+44 123 654 7890</a
+                        >
                       </li>
                       <li class="social">
                         <a href="#">
@@ -1080,6 +1141,9 @@
         </div>
       </div>
     </footer>
+    <div class="button-contact-us d-none">
+      <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </div>
     <!-- End Footer -->
 
     <!-- Bootstrap -->

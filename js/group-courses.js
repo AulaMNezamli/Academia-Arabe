@@ -2,28 +2,22 @@ var overlay = document.getElementById("overlay");
 var drop = document.getElementById("drop");
 var dropOne = document.getElementById("drop-one");
 var dropTwo = document.getElementById("drop-two");
-
 drop.onclick = (e) => {
   overlay.style.display = "block";
   document.body.style.overflowY = "hidden";
 };
-
 dropOne.onclick = (e) => {
   overlay.style.display = "block";
   document.body.style.overflowY = "hidden";
 };
-
 dropTwo.onclick = (e) => {
   overlay.style.display = "block";
   document.body.style.overflowY = "hidden";
 };
-
 overlay.onclick = (_) => {
   overlay.style.display = "none";
   document.body.style.overflowY = "auto";
 };
-// ========================================================
-
 // SideBar
 function openNav() {
   let open = document.getElementById("mySidenav");
@@ -36,8 +30,6 @@ function openNav() {
     open.style.display = "none";
   }
 }
-// ========================================================
-
 // Close
 function closeNav() {
   let open = document.getElementById("mySidenav");
@@ -47,9 +39,9 @@ function scrollToSection() {
   var section = document.getElementById("mySection");
   section.scrollIntoView({ behavior: "smooth" });
 }
-
-// ========================================================
-
+document.getElementById("contact-button").addEventListener("click", function() {
+  window.location.href = "contact.html";
+});
 $(".slider-three").owlCarousel({
   items: 3,
   loop: false,
@@ -61,7 +53,7 @@ $(".slider-three").owlCarousel({
   ],
   responsive: {
     0: {
-      items: 1,
+      items: 1.25,
     },
     600: {
       items: 2,
@@ -71,9 +63,6 @@ $(".slider-three").owlCarousel({
     },
   },
 });
-
-// ========================================================
-
 $(".slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
   if (!e.namespace) {
     return;
@@ -105,8 +94,6 @@ $("#owl-carousel").owlCarousel({
     },
   },
 });
-// ========================================================
-
 $(".slider-one")
   .on("initialized.owl.carousel changed.owl.carousel", function (e) {
     if (!e.namespace) {
@@ -140,3 +127,22 @@ $(".slider-one")
       },
     },
   });
+$("#home").owlCarousel({
+  loop: false,
+  margin: 0,
+  nav: false,
+  responsive: {
+    0: {
+      items: 2.5,
+    },
+    400: {
+      items: 3.5,
+    },
+    600: {
+      items: 4,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});

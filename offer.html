@@ -24,10 +24,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/aboutus.css" />
+    <link rel="stylesheet" href="css/services.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -65,9 +65,7 @@
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
             </li>
             <li
               class="nav-item dropdown dropdown-mega position-static desktop"
@@ -105,7 +103,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -123,7 +124,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -145,7 +149,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -163,7 +170,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -245,7 +255,7 @@
             </li>
             <li class="nav-item dropdown" id="drop-two">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link active dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -320,7 +330,7 @@
             </div>
             <ul class="mysidenav-ul">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html"
+                <a class="nav-link" aria-current="page" href="home.html"
                   >Home</a
                 >
               </li>
@@ -339,19 +349,27 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Face-To-Face Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Face-To-Face Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Hybrid Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Hybrid Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Online Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Online Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Companies Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Companies Courses</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -428,7 +446,7 @@
               </li>
               <li class="nav-item dropdown" id="drop-two">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link active dropdown-toggle"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -439,7 +457,7 @@
                     class="fa-solid fa-chevron-down"
                   ></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="about-us">
                   <li>
                     <a class="dropdown-item" href="academy.html">The Academy</a>
                   </li>
@@ -526,7 +544,7 @@
       <div class="container" id="container">
         <div class="row">
           <div class="col-md-3">
-            <div class="about">
+            <div class="about" id="about-desktop">
               <button onclick="window.location.href='academy.html'">
                 The Academy
               </button>
@@ -563,102 +581,245 @@
             </div>
           </div>
           <div class="col-md-9">
-            <div class="academy">
+            <div class="offer">
+              <button id="filterButton">
+                <img src="images/fi_menu.svg" alt="" />
+                <span>What We Offer</span>
+              </button>
+              <div id="filterModal" class="modal">
+                <div class="modal-content">
+                  <div class="title-filter-modal">
+                    <h4>About Us</h4>
+                    <i class="fa-solid fa-xmark" id="close"></i>
+                  </div>
+                  <div class="about">
+                    <button onclick="window.location.href='academy.html'">
+                      The Academy
+                    </button>
+                    <button onclick="window.location.href='philosophy.html'">
+                      Our Philosophy
+                    </button>
+                    <button
+                      class="active"
+                      onclick="window.location.href='offer.html'"
+                    >
+                      What We Offer
+                    </button>
+                    <button onclick="window.location.href='activities.html'">
+                      Activities
+                    </button>
+                    <button onclick="window.location.href='teachers.html'">
+                      Our Teachers
+                    </button>
+                    <button onclick="window.location.href='arabic-levels.html'">
+                      Arabic Levels
+                    </button>
+                    <button onclick="window.location.href='facilities.html'">
+                      Facilities
+                    </button>
+                    <button onclick="window.location.href='testimonials.html'">
+                      Testimonials
+                    </button>
+                    <button onclick="window.location.href='work-with-us.html'">
+                      Work With Us
+                    </button>
+                    <button
+                      onclick="window.location.href='links-interest.html'"
+                    >
+                      Links of Interest
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div class="content" id="content-offer">
                 <div class="text-content" id="text-offer">
                   <h4>What We Offer</h4>
                 </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="group-one">
-                      <img src="images/Face to face.png" alt="" />
-                      <span>Face-To-Face<br />Arabic Classes</span>
-                      <button
-                        class="btn btn-outline-primary onclick="
-                        window.location.href="#"
-                      >
-                        View Courses
-                      </button>
+                <div class="desktop-offer">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="group-one">
+                        <img src="images/Face to face.png" alt="" />
+                        <span>Face-To-Face<br />Arabic Classes</span>
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="group-one">
+                        <img src="images/Online learning.png" alt="" />
+                        <span
+                          >Online Arabic <br />
+                          Classes</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="group-one">
+                        <img src="images/Pitch meeting.png" alt="" />
+                        <span
+                          >Hybrid Arabic <br />
+                          Classes</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
-                    <div class="group-one">
-                      <img src="images/Online learning.png" alt="" />
-                      <span
-                        >Online Arabic <br />
-                        Classes</span
-                      >
-                      <button
-                        class="btn btn-outline-primary onclick="
-                        window.location.href="#"
-                      >
-                        View Courses
-                      </button>
+                  <div class="row" id="add-padd">
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="group-one">
+                        <img src="images/Shared workspace-rafiki 1.png" alt="" />
+                        <span
+                          >Arabic Courses <br />
+                          for Companies</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="group-one">
-                      <img src="images/Pitch meeting.png" alt="" />
-                      <span
-                        >Hybrid Arabic <br />
-                        Classes</span
-                      >
-                      <button
-                        class="btn btn-outline-primary onclick="
-                        window.location.href="#"
-                      >
-                        View Courses
-                      </button>
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="group-one">
+                        <img src="images/English teacher.png" alt="" />
+                        <span
+                          >Summer <br />
+                          Intensives</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="group-one">
+                        <img src="images/Group Chat.png" alt="" />
+                        <span
+                          >Conversation <br />
+                          Courses</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="row" id="add-padd">
-                  <div class="col-md-4">
-                    <div class="group-one">
-                      <img
-                        src="images/Shared workspace-rafiki 1.png"
-                        alt=""
-                      />
-                      <span
-                        >Arabic Courses <br />
-                        for Companies</span
-                      >
-                      <button
-                        class="btn btn-outline-primary onclick="
-                        window.location.href="#"
-                      >
-                        View Courses
-                      </button>
+                <div class="mobile-offer d-none">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="group-one">
+                        <img src="images/Face to face.png" alt="" />
+                        <span>Face-To-Face<br />Arabic Classes</span>
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="group-one">
+                        <img src="images/Online learning.png" alt="" />
+                        <span
+                          >Online Arabic <br />
+                          Classes</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
-                    <div class="group-one">
-                      <img src="images/English teacher.png" alt="" />
-                      <span
-                        >Summer <br />
-                        Intensives</span
-                      >
-                      <button
-                        class="btn btn-outline-primary onclick="
-                        window.location.href="#"
-                      >
-                        View Courses
-                      </button>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="group-one">
+                        <img src="images/Pitch meeting.png" alt="" />
+                        <span
+                          >Hybrid Arabic <br />
+                          Classes</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="group-one">
+                        <img src="images/Shared workspace-rafiki 1.png" alt="" />
+                        <span
+                          >Arabic Courses <br />
+                          for Companies</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
-                    <div class="group-one">
-                      <img src="images/Group Chat.png" alt="" />
-                      <span
-                        >Conversation <br />
-                        Courses</span
-                      >
-                      <button
-                        class="btn btn-outline-primary onclick="
-                        window.location.href="#"
-                      >
-                        View Courses
-                      </button>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="group-one">
+                        <img src="images/English teacher.png" alt="" />
+                        <span
+                          >Summer <br />
+                          Intensives</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="group-one">
+                        <img src="images/Group Chat.png" alt="" />
+                        <span
+                          >Conversation <br />
+                          Courses</span
+                        >
+                        <button
+                          class="btn btn-outline-primary onclick="
+                          window.location.href="#"
+                        >
+                          View Courses
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -688,9 +849,7 @@
       </div>
     </section>
     <!-- End academy-section -->
-
     <!-- Start Footer -->
-
     <footer>
       <div class="container p-0">
         <div class="footer-section" id="footer-section-desktop">
@@ -698,10 +857,12 @@
             <div class="footer-title">
               <h6>Our Courses</h6>
               <ul>
-                <li><a href="courses.html">Face-To-Face Courses</a></li>
-                <li><a href="courses.html">Online Courses</a></li>
-                <li><a href="courses.html">Hybrid Courses</a></li>
-                <li><a href="courses.html">Companies Courses</a></li>
+                <li class="li-one">
+                  <a href="courses-list.html">Face-To-Face Courses</a>
+                </li>
+                <li><a href="courses-list.html">Online Courses</a></li>
+                <li><a href="courses-list.html">Hybrid Courses</a></li>
+                <li><a href="courses-list.html">Companies Courses</a></li>
               </ul>
             </div>
           </div>
@@ -749,7 +910,7 @@
             <div class="footer-title" id="footer-title">
               <h6>Contact Us</h6>
               <ul>
-                <li>
+                <li class="li-one">
                   <img src="images/fi_home.png" alt="fi_home" />
                   4074 Ebert Summit Suite 375
                 </li>
@@ -789,9 +950,9 @@
         </div>
 
         <div class="footer-section-one d-none">
-          <div class="container">
+          <div class="container" id="footer-section-one">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-two">
                   <h6>Our Services</h6>
                   <div class="footer-title" id="section-two">
@@ -816,7 +977,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-three">
                   <h6>About Us</h6>
 
@@ -842,22 +1003,24 @@
               </div>
             </div>
             <div class="row" id="footer-mobile">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-one">
                   <h6>Our Courses</h6>
                   <div class="footer-title" id="section-one">
                     <ul>
-                      <li><a href="courses.html">Face-To-Face Courses</a></li>
-                      <li><a href="courses.html">Online Courses</a></li>
+                      <li>
+                        <a href="courses-list.html">Face-To-Face Courses</a>
+                      </li>
+                      <li><a href="courses-list.html">Online Courses</a></li>
                     </ul>
                     <ul>
-                      <li><a href="courses.html">Hybrid Courses</a></li>
-                      <li><a href="courses.html">Companies Courses</a></li>
+                      <li><a href="courses-list.html">Hybrid Courses</a></li>
+                      <li><a href="courses-list.html">Companies Courses</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-four">
                   <h6>Contact Us</h6>
                   <div class="footer-title" id="section-four">
@@ -876,7 +1039,9 @@
                     <ul>
                       <li>
                         <img src="images/fi_phone.png" alt="fi_phone" />
-                        <a href="tel:+44 123 654 7890">+44 123 654 7890</a>
+                        <a href="tel:+44 123 654 7890" id="phone"
+                          >+44 123 654 7890</a
+                        >
                       </li>
                       <li class="social">
                         <a href="#">
@@ -926,7 +1091,9 @@
         </div>
       </div>
     </footer>
-
+    <div class="button-contact-us d-none">
+      <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </div>
     <!-- End Footer -->
 
     <!-- Bootstrap -->
@@ -938,5 +1105,6 @@
 
     <!-- Js File -->
     <script src="js/aboutus.js"></script>
+    <script src="js/services.js"></script>
   </body>
 </html>

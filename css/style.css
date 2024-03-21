@@ -5,7 +5,8 @@
   --color: #0b3954;
   --color-one: #454b4f;
   --color-white: #fff;
-  --color-gry: #747a7e;
+  --color-grey: #747a7e;
+  --color-b: #1b1e1f;
   --background-color: #fbfeff;
   --font-family: Poppins;
 }
@@ -20,14 +21,14 @@ div#menu-sidebar-icon {
   background: transparent;
   font-size: 20px;
   position: relative;
-  right: 153px;
+  right: 60px;
   top: -2px;
 }
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 13;
   top: 0;
   left: 0;
   background-color: var(--background-color);
@@ -52,7 +53,7 @@ i.fa-solid.fa-xmark {
   font-size: 24px;
   position: absolute;
   right: 0;
-  border: 1px solid var(--color-gry);
+  border: 1px solid var(--color-grey);
   padding: 8px;
   border-radius: 8px;
   color: var(--color);
@@ -378,40 +379,46 @@ section.client {
     --Gradient,
     linear-gradient(180deg, rgba(209, 234, 249, 0) 0%, #d1eaf9 100%)
   );
-  padding: 64px 0;
+  padding: 64px 0 32px 0;
 }
 .client h5 {
-  color: #1b1e1f;
+  color: var(--color-b);
   font-family: var(--font-family);
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   padding-bottom: 40px;
+  margin: 0;
 }
 .clients {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
+  flex-wrap: wrap;
 }
 .client-name {
   display: flex;
   padding: 16px 11px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
   flex: 1 0 0;
+  flex-basis: calc(20% - 10px);
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
 }
-.client-name {
-  background-image: url(../images/Group\ 6.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 73px;
+.original-img {
+  transition: opacity 0.3s ease-in-out;
 }
-.client-name:hover {
-  background-image: url(../images/Group\ 7.svg);
-  background-repeat: no-repeat;
+.hover-img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.client-name:hover .original-img {
+  opacity: 0;
+}
+.client-name:hover .hover-img {
+  opacity: 1;
 }
 /* End Clients Section */
 /* Start Our Courses  */
@@ -480,7 +487,7 @@ section.client {
 }
 a.btn.btn-outline-primary {
   border-radius: 8px;
-  border: 1px solid var(--color-gry);
+  border: 1px solid var(--color-grey);
   color: var(--color);
   font-family: var(--font-family);
   font-weight: 600;
@@ -557,7 +564,7 @@ section.choose-us {
   box-shadow: 0px 4px 15px 1px rgba(8, 43, 63, 0.25);
 }
 .flexible span {
-  color: #1b1e1f;
+  color: var(--color-b);
   font-family: var(--font-family);
   font-weight: 600;
 }
@@ -619,7 +626,7 @@ button.show-more {
   background-color: var(--color);
   font-family: var(--font-family);
   border: none;
-  color: #fff;
+  color: var(--color-white);
 }
 .see a button:hover,
 button.show-more:hover {
@@ -647,7 +654,7 @@ button.show-more:hover {
 }
 .tab.whiteborder,
 .tab-mobile.whiteborder {
-  color: #1b1e1f;
+  color: var(--color-b);
   border-bottom: 2px solid var(--color);
   font-weight: 600;
 }
@@ -744,7 +751,7 @@ span.discount::before {
 }
 span.descuento {
   display: flex;
-  width: 135.747px;
+  width: 158.747px;
   transform: rotate(45deg);
   padding: 8px;
   justify-content: center;
@@ -755,8 +762,9 @@ span.descuento {
   font-size: 10px;
   letter-spacing: 0.4px;
   position: absolute;
-  top: 21px;
-  right: -25px;
+  top: 29px;
+  right: -39px;
+
   background: linear-gradient(-135deg, transparent 26px, #b3261e 0) bottom right,
     linear-gradient(-147deg, transparent 30px, #b3261e 0) top right,
     linear-gradient(135deg, transparent 22.7px, #b3261e 0) bottom left,
@@ -840,6 +848,7 @@ button.show-more {
 .our-students {
   background: #d1eaf9;
   border-radius: 0 0 60% 60% / 0 0 15% 15%;
+  padding-top: 30px;
 }
 .our-students h3 {
   color: var(--color);
@@ -848,14 +857,13 @@ button.show-more {
   font-weight: 700;
   line-height: 72px;
   text-align: center;
-  padding-top: 112px;
   padding-bottom: 51px;
   position: relative;
   margin: 0;
 }
 /* Carousel */
 .item {
-  /* width: 964px; */
+  width: 964px;
   margin: auto;
   position: relative;
 }
@@ -880,9 +888,9 @@ button.show-more {
 img.img-item {
   width: 72px !important;
   margin: auto;
-  border: 1px solid var(--color);
+  border: 2px solid var(--color);
   border-radius: 72px;
-  margin-top: 30px;
+  margin-top: 70px;
   padding: 6px;
 }
 .owl-dots {
@@ -941,7 +949,7 @@ button.owl-prev.disabled {
   padding-bottom: 24px;
 }
 button.blog-button {
-  margin: 24px 0 29px 0;
+  margin: 0 0 29px 0;
 }
 
 /* End Our Students Section */
@@ -1007,16 +1015,17 @@ button.blog-button {
   padding-top: 16px;
 }
 span.card-title-blog {
-  color: #1b1e1f;
+  color: var(--color-b);
   font-family: var(--font-family);
   font-size: 22px;
   font-weight: 600;
   line-height: 32px;
   transition: 0.1s;
+  text-align: left;
 }
 .card-blog:hover .card-title-blog {
   color: var(--color);
-  border-bottom: 2px solid var(--color);
+  border-bottom: 1px solid var(--color);
 }
 p.card-blog-text {
   color: var(--color-one);
@@ -1024,6 +1033,7 @@ p.card-blog-text {
   letter-spacing: 0.4px;
   text-align: left;
   padding-top: 8px;
+  margin-bottom: 8px;
 }
 .card-blog-body button {
   display: flex;
@@ -1175,7 +1185,21 @@ span.year {
 .footer-section-one {
   display: none;
 }
-
+.button-contact-us.d-none {
+  padding: 8px 16px 24px 16px;
+  text-align: center;
+}
+.button-contact-us button {
+  padding: 12px 24px;
+  color: var(--color-white);
+  font-family: var(--font-family);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  background: var(--color);
+  width: 100%;
+  border: none;
+}
 .iti__flag.iti__ae {
   background-image: url(../images/AE.svg);
   background-position: top;
@@ -1210,7 +1234,7 @@ select {
 }
 .iti--show-selected-dial-code.iti--show-flags .iti__selected-dial-code {
   margin-left: 0px;
-  color: #1b1e1f;
+  color: var(--color-b);
   font-family: var(--font-family);
   letter-spacing: 0.4px;
 }
@@ -1249,7 +1273,7 @@ input#mobile:focus-visible {
   background-color: transparent;
 }
 .form-select:focus {
-  border-color: var(--color-gry);
+  border-color: var(--color-grey);
   outline: 0;
   box-shadow: unset;
 }
@@ -1264,7 +1288,7 @@ input.iti__search-input {
   border-radius: 8px;
 }
 .iti--inline-dropdown .iti__dropdown-content {
-  border: 1px solid var(--color-gry);
+  border: 1px solid var(--color-grey);
   box-shadow: unset;
   border-radius: 8px;
 }
@@ -1316,33 +1340,13 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
 }
-
-/* Responsive */
-@media (max-width: 620px) {
-  #menu-sidebar-icon button {
-    right: 65px;
-  }
-  .courses {
-    left: 62px;
-  }
-  .learners {
-    left: 22rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .nav-hero {
-    height: 963px;
-  }
-}
-
 @media (max-width: 1400px) {
+  .dropdown-menu.shadow.show {
+    left: 17rem;
+  }
   section.our-services {
     background-image: linear-gradient(147deg, #d1eaf6 50%, #d1eaf600 0%),
       url(../images/Groupa.png);
-  }
-  span.descuento {
-    right: -41px;
   }
   .group1 {
     margin-left: 0;
@@ -1358,6 +1362,9 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 1300px) {
+  .dropdown-menu.shadow.show {
+    left: 14rem;
+  }
   #footer-section-desktop {
     display: none;
   }
@@ -1401,11 +1408,14 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 1200px) {
+  .dropdown-menu.shadow.show {
+    left: 9rem;
+  }
   span.descuento {
     width: 127.747px;
     letter-spacing: normal;
-    top: 18px;
-    right: -35px;
+    top: 19px;
+    right: -33px;
   }
   section.our-services {
     background-image: linear-gradient(139deg, #d1eaf6 50%, #d1eaf600 0%),
@@ -1422,6 +1432,9 @@ input[type="checkbox"] {
   .our-courses-box-one {
     left: 32px;
     top: 65px;
+  }
+  a#phone {
+    font-size: 15px;
   }
 }
 @media (max-width: 1115px) {
@@ -1456,6 +1469,9 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 1100px) {
+  .dropdown-menu.shadow.show {
+    left: 6rem;
+  }
   #section-two,
   #section-three {
     gap: 50px;
@@ -1513,6 +1529,8 @@ input[type="checkbox"] {
     right: -41px;
     padding: 5px;
     width: 174.747px;
+    color: var(--color-white);
+    font-weight: 400;
   }
   #tabs {
     display: none;
@@ -1679,10 +1697,16 @@ input[type="checkbox"] {
     left: 15rem;
     top: 13rem;
   }
+  .item {
+    width: auto;
+  }
+  a#phone {
+    font-size: 16px;
+  }
 }
 @media (max-width: 890px) {
   .text-choose {
-    width: 360px;
+    width: 320px;
   }
 }
 @media (max-width: 885px) {
@@ -1692,7 +1716,6 @@ input[type="checkbox"] {
     gap: 0;
   }
   .footer-end {
-    align-items: center;
     flex-direction: column;
   }
   span.year {
@@ -1706,13 +1729,8 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 768px) {
-  .footer-end {
-    align-items: unset;
-  }
-  .section-three,
-  #footer-mobile,
-  .section-four {
-    padding-top: 24px;
+  .background-courses {
+    height: auto;
   }
   hr {
     margin: 24px 0;
@@ -1752,6 +1770,17 @@ input[type="checkbox"] {
   .item span {
     font-size: 19px;
   }
+  .client-name {
+    flex-basis: calc(50% - 10px);
+  }
+  .section-three,
+  #footer-mobile,
+  .section-four {
+    padding-top: 24px;
+  }
+  .footer-end {
+    align-items: unset;
+  }
 }
 @media (max-width: 767px) {
   section.choose-us {
@@ -1765,9 +1794,9 @@ input[type="checkbox"] {
     margin: 0 0 24px 0 !important;
   }
   span.descuento {
-    font-size: 12px;
+    font-size: 10px;
     top: 30px;
-    right: 16px;
+    right: -40px;
     width: 158.747px;
   }
   .text-title h1 {
@@ -1778,9 +1807,6 @@ input[type="checkbox"] {
   }
   .card {
     align-items: self-start;
-  }
-  .our-students h3 {
-    font-size: 40px;
   }
   .card-services {
     padding: 16px;
@@ -1880,6 +1906,36 @@ input[type="checkbox"] {
     left: 25.39rem;
     top: 19.8rem;
   }
+  .item p {
+    width: auto;
+  }
+  .title-blog {
+    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title-blog h3 {
+    padding-bottom: 0;
+  }
+  .title-blog a {
+    margin-left: unset;
+  }
+}
+@media (max-width: 755px) {
+  .our-students {
+    border-radius: 0 0 60% 60% / 0 0 5% 5%;
+  }
+}
+@media (max-width: 620px) {
+  #menu-sidebar-icon button {
+    right: 65px;
+  }
+  .courses {
+    left: 62px;
+  }
+  .learners {
+    left: 22rem;
+  }
 }
 @media (max-width: 576px) {
   .title {
@@ -1891,15 +1947,18 @@ input[type="checkbox"] {
   .item {
     margin: unset !important;
   }
+  .our-students h3 {
+    line-height: 60px;
+    font-size: 40px;
+  }
   div#card-mobile {
     width: 100% !important;
   }
   span.descuento {
-    padding: 8px !important;
-    top: 23px !important;
-    right: -32px !important;
-    font-size: 11px !important;
-    width: 137.747px !important;
+    padding: 8px;
+    top: 23px;
+    right: -36px;
+    width: 142.747px;
   }
   .text-title h1 {
     font-size: 40px;
@@ -1912,23 +1971,12 @@ input[type="checkbox"] {
   .title-blog a {
     margin-left: unset;
   }
-  .title-blog h3 {
-    font-size: 40px;
-    margin-bottom: 0;
-    padding-bottom: 24px;
-  }
   .blog-section {
     padding-top: 48px;
     height: 785px;
   }
   .our-students {
-    border-radius: 0 0 100% 100% / 0 0 5% 5%;
-    height: 900px;
-  }
-  .our-students h3 {
-    padding-top: 48px;
-    padding-bottom: 24px;
-    margin: 0;
+    height: auto;
   }
   section.our-services {
     background-image: linear-gradient(105deg, #d1eaf6 49%, #d1eaf600 0%),
@@ -2039,8 +2087,17 @@ input[type="checkbox"] {
   button.show-more {
     display: block;
   }
+  .section1.text-center {
+    padding: 0 16px;
+  }
   footer {
     padding: 64px 16px;
+  }
+  .button-contact-us {
+    display: block !important;
+  }
+  .our-students {
+    border-radius: 0 0 20% 20% / 0 0 1% 1%;
   }
 }
 @media (max-width: 520px) {
@@ -2051,6 +2108,11 @@ input[type="checkbox"] {
 @media (max-width: 503px) {
   .nav-hero {
     height: 962px;
+  }
+}
+@media (max-width: 500px) {
+  .nav-hero {
+    height: 963px;
   }
 }
 @media (max-width: 475px) {
@@ -2156,7 +2218,6 @@ input[type="checkbox"] {
       url(../images/Groupa.png);
   }
 }
-
 @media (max-width: 372px) {
   .face-to-face-box {
     width: 315px;
@@ -2233,30 +2294,7 @@ input[type="checkbox"] {
     background-image: linear-gradient(96.5deg, #d1eaf6 51%, #d1eaf600 0%),
       url(../images/Groupa.png);
   }
-  .title-blog h3 {
-    font-size: 37px;
-  }
   .text-choose h3 {
     font-size: 33px;
-  }
-}
-@media (max-width: 910px) {
-  .our-students h3 {
-    font-size: 45px;
-    padding-top: 48px;
-    padding-bottom: 24px;
-  }
-}
-@media (max-width: 755px) {
-  .our-students {
-    border-radius: 0 0 60% 60% / 0 0 5% 5%;
-  }
-}
-@media (max-width: 469px) {
-  .our-students {
-    border-radius: 0 0 100% 100% / 0 0 5% 5%;
-  }
-  .our-students h3 {
-    font-size: 40px;
   }
 }

@@ -1,0 +1,63 @@
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1300px !important;
+  }
+}
+@media (max-width: 1200px) {
+  .col-md-3 {
+    width: 20% !important;
+  }
+  .col-md-9 {
+    width: 80% !important;
+  }
+}
+@media (max-width: 992px) {
+  .col-md-3 {
+    width: 25% !important;
+  }
+  .col-md-9 {
+    width: 75% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-3 {
+    width: auto !important;
+  }
+  .col-md-9 {
+    width: auto !important;
+  }
+  button#filterButton {
+    margin: auto;
+  }
+  #activities-text h4 {
+    text-align: center;
+  }
+  .teachers-activities {
+    width: auto;
+  }
+  .teachers-activities p {
+    text-align: center;
+  }
+  .read-more {
+    margin-right: unset;
+  }
+  .academy-section {
+    background-image: unset;
+  }
+}
+
+@media (max-width: 575px) {
+  button#filterButton {
+    margin: unset;
+  }
+  #activities-text h4 {
+    text-align: left;
+  }
+  .teachers-activities p {
+    text-align: left;
+  }
+  .read-more {
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,5 @@
+.col-md-6,.col-md-4 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  

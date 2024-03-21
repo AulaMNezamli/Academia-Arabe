@@ -106,7 +106,7 @@ $(".slider-three").owlCarousel({
   ],
   responsive: {
     0: {
-      items: 1,
+      items: 1.25,
     },
     600: {
       items: 2,

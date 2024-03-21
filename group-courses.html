@@ -87,7 +87,7 @@
               id="drop"
             >
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link active dropdown-toggle"
                 id="dropdown-menu-one-mobile"
                 href="#"
                 data-bs-toggle="dropdown"
@@ -118,7 +118,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -136,7 +139,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -158,7 +164,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -176,7 +185,10 @@
                                 Lorem ipsum dolor sit amet consectetur. Elit dui
                                 viverra
                               </p>
-                              <a href="#" class="btn btn-outline-primary">
+                              <a
+                                href="courses-list.html"
+                                class="btn btn-outline-primary"
+                              >
                                 View Courses
                               </a>
                             </div>
@@ -352,19 +364,27 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Face-To-Face Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Face-To-Face Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Hybrid Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Hybrid Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Online Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Online Courses</a
+                    >
                   </li>
 
                   <li>
-                    <a class="dropdown-item" href="#">Companies Courses</a>
+                    <a class="dropdown-item" href="courses-list.html"
+                      >Companies Courses</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -452,7 +472,7 @@
                     class="fa-solid fa-chevron-down"
                   ></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="about-us">
                   <li>
                     <a class="dropdown-item" href="academy.html">The Academy</a>
                   </li>
@@ -520,8 +540,8 @@
       </header>
     </nav>
     <!-- End Navbar -->
-    <div class="container">
-      <div class="home">
+    <div class="container" id="home-container">
+      <div class="home" id="home-desktop">
         <a href="home.html">Home</a>
         <i class="fa-solid fa-chevron-right"></i>
         <a href="courses-list.html">Courses</a>
@@ -530,11 +550,31 @@
         <i class="fa-solid fa-chevron-right"></i>
         <a href="group-courses.html">Group Courses</a>
       </div>
+
+      <div class="home">
+        <div class="items owl-carousel" id="home">
+          <div class="item" id="item">
+            <a href="home.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="item" id="item">
+            <a href="courses-list.html">Courses</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="item" id="item">
+            <a href="courses-list.html">Face-To-Face</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="item" id="item">
+            <a href="group-courses.html">Group Courses</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="group-courses">
       <div class="row">
-        <div class="col-md-8" id="col-md-8">
+        <div class="col-lg-8 col-md-12" id="col-md-8">
           <div class="text-group-courses">
             <h5>
               Lorem ipsum dolor sit amet consectetur. Tortor mi massa Lorem
@@ -563,83 +603,14 @@
             </button>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="form-fixed">
-            <div class="title-form-fixed">
-              <h5>Contact Us At</h5>
-              <span>Academia Árabe</span>
-            </div>
-            <form action="">
-              <div class="forminput" id="forminput">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Name and Surname"
-                />
-              </div>
-              <div class="forminput" id="forminput">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div
-                class="forminput d-flex"
-                style="flex-direction: column"
-                id="forminput"
-              >
-                <input
-                  placeholder="Phone"
-                  class="for1"
-                  type="tel"
-                  maxlength="40"
-                  size="20"
-                  pattern="[+]{0,1}[0-9]{8,13}"
-                  name="mobile"
-                  id="mobile"
-                  class="AutosubmitCalculator"
-                  value="+971"
-                  onkeypress="return AllowOnlyNumbers(event);"
-                />
-              </div>
-              <div class="messgae">
-                <textarea
-                  class="form-control"
-                  placeholder="Your Message"
-                  id="messgae"
-                  rows="6"
-                ></textarea>
-              </div>
-              <div class="form-check">
-                <div class="input-day">
-                  <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                </div>
-                <label class="form-check-label" for="flexCheckDefault">
-                  I have read and accept the <a href="#">privacy policy</a> and
-                  <a href="#">terms and conditions</a>.
-                </label>
-              </div>
-              <div class="submit">
-                <button type="submit">Contact Us</button>
-              </div>
-            </form>
-          </div>
-        </div>
+        <div class="col-lg-4 col-md-12"></div>
       </div>
     </div>
 
     <section class="section-group-courses">
       <div class="row">
-        <div class="col-md-8">
-          <div><img src="images/Trailer.png" alt="" /></div>
+        <div class="col-lg-8 col-md-12">
+          <div><img src="images/Trailer.png" alt="" width="100%" /></div>
 
           <div class="all-section-group-courses">
             <div class="text-section-group-courses">
@@ -698,33 +669,35 @@
             </div>
             <div class="div-four">
               <h6>Lorem ipsum</h6>
-              <div class="text-div-four">
-                <i class="fa-solid fa-arrow-right"></i>
-                <p>
-                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
-                  aliquam vel, lacinia quis ex.
-                </p>
-              </div>
-              <div class="text-div-four">
-                <i class="fa-solid fa-arrow-right"></i>
-                <p>
-                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
-                  aliquam vel, lacinia quis ex.
-                </p>
-              </div>
-              <div class="text-div-four">
-                <i class="fa-solid fa-arrow-right"></i>
-                <p>
-                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
-                  aliquam vel, lacinia quis ex.
-                </p>
-              </div>
-              <div class="text-div-four">
-                <i class="fa-solid fa-arrow-right"></i>
-                <p>
-                  Sed nec dapibus orci integer nisl turpis, eleifend sit amet
-                  aliquam vel, lacinia quis ex.
-                </p>
+              <div class="texts-div-four">
+                <div class="text-div-four">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <p>
+                    Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                    aliquam vel, lacinia quis ex.
+                  </p>
+                </div>
+                <div class="text-div-four">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <p>
+                    Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                    aliquam vel, lacinia quis ex.
+                  </p>
+                </div>
+                <div class="text-div-four">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <p>
+                    Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                    aliquam vel, lacinia quis ex.
+                  </p>
+                </div>
+                <div class="text-div-four">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <p>
+                    Sed nec dapibus orci integer nisl turpis, eleifend sit amet
+                    aliquam vel, lacinia quis ex.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="div-five">
@@ -758,7 +731,7 @@
             </div>
             <div class="div-six">
               <h6>Lorem ipsum</h6>
-              <div class="table-wrapper text-center">
+              <div class="table-wrapper text-center" id="table-desktop">
                 <table class="fl-table">
                   <caption>
                     The quarterly courses consist of 30 lessons throughout the
@@ -766,63 +739,55 @@
                   </caption>
                   <thead>
                     <tr>
-                      <th colspan="4">Label</th>
-                      <th colspan="4">Label</th>
+                      <th colspan="4">Two days 3 lessons per week</th>
+                      <th colspan="4">One day 3 lessons per week</th>
                     </tr>
                     <tr>
-                      <th colspan="2">Label</th>
-                      <th colspan="2">Label</th>
-                      <th colspan="2">Label</th>
-                      <th colspan="2">Label</th>
+                      <th colspan="2">Monday and Wednesday</th>
+                      <th colspan="2">Tuesday and Thursday</th>
+                      <th colspan="2">Friday</th>
+                      <th colspan="2">Saturday</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td colspan="4">Label</td>
-                      <td colspan="2">Label</td>
-                      <td colspan="2">Label</td>
+                      <td colspan="4">Mornings</td>
+                      <td colspan="2">Mornings</td>
+                      <td colspan="2">Mornings</td>
                     </tr>
                     <tr>
                       <td colspan="4">
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
+                        <div>09:00 - 10:15</div>
+                        <div>10:30 - 11:45</div>
+                        <div>12:00 - 13:15</div>
+                        <div>13:30 - 14:45</div>
                       </td>
                       <td colspan="2">
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
+                        <div>09:00 - 11:30</div>
+                        <div>11:45 - 14:15</div>
                       </td>
                       <td colspan="2">
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
+                        <div>09:00 - 11:30</div>
+                        <div>11:45 - 14:15</div>
                       </td>
                     </tr>
                     <tr>
-                      <td colspan="4">Label</td>
-                      <td colspan="2">Label</td>
-                      <td colspan="2">Label</td>
+                      <td colspan="4">Afternoon</td>
+                      <td colspan="2">Afternoon</td>
+                      <td colspan="2">Afternoon</td>
                     </tr>
                     <tr>
                       <td colspan="4">
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
+                        <div>15:30 - 16:45</div>
+                        <div>17:00 – 18:15</div>
+                        <div>18:30 – 19:45</div>
+                        <div>20:00 – 21:15</div>
                       </td>
                       <td colspan="2">
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
-                        <div>Label</div>
+                        <div>16:00 - 18:30</div>
+                        <div>18:45 - 21:15</div>
                       </td>
                       <td colspan="2">
-                        <div>Label</div>
-                        <div>Label</div>
                         <div>Label</div>
                         <div>Label</div>
                       </td>
@@ -830,112 +795,269 @@
                   </tbody>
                 </table>
               </div>
+
+              <div class="div-six-table d-none">
+                <div class="table-wrapper text-center">
+                  <table class="fl-table">
+                    <thead>
+                      <tr>
+                        <th colspan="4">Two days 3 lessons per week</th>
+                      </tr>
+                    </thead>
+                    <tbody class="first-half">
+                      <tr>
+                        <th colspan="2">Monday and Wednesday</th>
+                        <th colspan="2">Tuesday and Thursday</th>
+                      </tr>
+                      <tr>
+                        <td colspan="4">Mornings</td>
+                      </tr>
+                      <td colspan="4">
+                        <div>09:00 - 10:15</div>
+                        <div>10:30 - 11:45</div>
+                        <div>12:00 - 13:15</div>
+                        <div>13:30 - 14:45</div>
+                      </td>
+                      <tr>
+                        <td colspan="4">Afternoon</td>
+                      </tr>
+                      <td colspan="4">
+                        <div>15:30 - 16:45</div>
+                        <div>17:00 – 18:15</div>
+                        <div>18:30 – 19:45</div>
+                        <div>20:00 – 21:15</div>
+                      </td>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="table-wrapper text-center">
+                  <table class="fl-table" id="table-two">
+                    <thead>
+                      <tr>
+                        <th colspan="4">One day 3 lessons per week</th>
+                      </tr>
+                    </thead>
+                    <tbody class="second-half">
+                      <tr>
+                        <th colspan="2">Friday</th>
+                        <th colspan="2">Saturday</th>
+                      </tr>
+                      <tr>
+                        <td colspan="2">Mornings</td>
+                        <td colspan="2">Mornings</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <div>09:00 - 11:30</div>
+                          <div>11:45 - 14:15</div>
+                        </td>
+                        <td colspan="2">
+                          <div>09:00 - 11:30</div>
+                          <div>11:45 - 14:15</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">Afternoon</td>
+                        <td colspan="2">Afternoon</td>
+                      </tr>
+                      <td colspan="2">
+                        <div>16:00 - 18:30</div>
+                        <div>18:45 - 21:15</div>
+                      </td>
+                      <td colspan="2">
+                        <div>16:00 - 18:30</div>
+                        <div>18:45 - 21:15</div>
+                      </td>
+                    </tbody>
+                    <caption>
+                      The quarterly courses consist of 30 lessons throughout the
+                      entire quarter.
+                    </caption>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="div-seven" id="mySection">
               <h5>Pricing Plans</h5>
               <div class="row" id="div-seven">
-                <div class="col-md-6">
+                <div class="col-xl-6 col-lg-12 col-md-6">
                   <div class="card-div-seven" id="card-div-seven-one">
                     <div class="header-card-seven">
                       <h6>Lorem Ipsum</h6>
                       <span>Lorem Ipsum</span>
                     </div>
-                    <div class="number-card">
-                      <span>€790</span>
-                    </div>
-                    <div class="body-card-seven">
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
+                    <div class="content-div-seven">
+                      <div class="number-card">
+                        <span>€790</span>
                       </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
+                      <div class="body-card-seven">
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
                       </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
+                      <div class="buy-now">
+                        <button
+                          onclick="window.location.href='registration.html'"
+                        >
+                          Buy Now
+                        </button>
                       </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                    </div>
-                    <div class="buy-now">
-                      <button
-                        onclick="window.location.href='registration.html'"
-                      >
-                        Buy Now
-                      </button>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xl-6 col-lg-12 col-md-6">
                   <div class="card-div-seven" id="card-div-seven">
                     <div class="header-card-seven">
                       <h6>Lorem Ipsum</h6>
                       <span>Lorem Ipsum</span>
                     </div>
-                    <div class="number-card">
-                      <span>€790</span>
-                      <span class="discount">€200</span>
-                    </div>
-                    <div class="body-card-seven">
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
+                    <div class="content-div-seven">
+                      <div class="number-card">
+                        <span>€790</span>
+                        <span class="discount">€200</span>
                       </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
+                      <div class="body-card-seven">
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="text-body-card-seven">
+                          <img src="images/fi_check-circle.svg" alt="" />
+                          <span>Lorem Ipsum</span>
+                        </div>
                       </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
+                      <div class="buy-now">
+                        <button
+                          onclick="window.location.href='registration.html'"
+                        >
+                          Buy Now
+                        </button>
                       </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                      <div class="text-body-card-seven">
-                        <img src="images/fi_check-circle.svg" alt="" />
-                        <span>Lorem Ipsum</span>
-                      </div>
-                    </div>
-                    <div class="buy-now">
-                      <button
-                        onclick="window.location.href='registration.html'"
-                      >
-                        Buy Now
-                      </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="div-eight">
+              <div class="form-fixed">
+                <div class="title-form-fixed">
+                  <h5>Contact Us At</h5>
+                  <span>Academia Árabe</span>
+                </div>
+                <form action="">
+                  <div class="forminput" id="forminput">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Name and Surname"
+                    />
+                  </div>
+                  <div class="forminput" id="forminput">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div
+                    class="forminput d-flex"
+                    style="flex-direction: column"
+                    id="forminput"
+                  >
+                    <input
+                      placeholder="Phone"
+                      class="for1"
+                      type="tel"
+                      maxlength="40"
+                      size="20"
+                      pattern="[+]{0,1}[0-9]{8,13}"
+                      name="mobile"
+                      id="mobile"
+                      class="AutosubmitCalculator"
+                      value="+971"
+                      onkeypress="return AllowOnlyNumbers(event);"
+                    />
+                  </div>
+                  <div class="messgae">
+                    <textarea
+                      class="form-control"
+                      placeholder="Your Message"
+                      id="messgae"
+                      rows="6"
+                    ></textarea>
+                  </div>
+                  <div class="form-check">
+                    <div class="input-day">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                    </div>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      I have read and accept the
+                      <a href="#">privacy policy</a> and
+                      <a href="#">terms and conditions</a>.
+                    </label>
+                  </div>
+                  <div class="submit">
+                    <button type="button" id="contact-button">Contact Us</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-lg-4 col-md-12"></div>
       </div>
     </section>
 
@@ -944,7 +1066,7 @@
       <div class="slider-three owl-carousel">
         <!-- Add your slider items here -->
         <div class="slider-item">
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <img
               src="images/Rectangle 7.png"
               class="card-img-top"
@@ -962,7 +1084,7 @@
           </div>
         </div>
         <div class="slider-item">
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <img
               src="images/Rectangle 7.png"
               class="card-img-top"
@@ -980,7 +1102,7 @@
           </div>
         </div>
         <div class="slider-item">
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <img
               src="images/Rectangle 7.png"
               class="card-img-top"
@@ -998,7 +1120,7 @@
           </div>
         </div>
         <div class="slider-item">
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <img
               src="images/Rectangle 7.png"
               class="card-img-top"
@@ -1016,7 +1138,7 @@
           </div>
         </div>
         <div class="slider-item">
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <img
               src="images/Rectangle 7.png"
               class="card-img-top"
@@ -1034,7 +1156,7 @@
           </div>
         </div>
         <div class="slider-item">
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <img
               src="images/Rectangle 7.png"
               class="card-img-top"
@@ -1750,7 +1872,6 @@
     </section>
     <!-- End Our Students Section -->
     <!-- Start Footer -->
-
     <footer>
       <div class="container p-0">
         <div class="footer-section" id="footer-section-desktop">
@@ -1758,10 +1879,12 @@
             <div class="footer-title">
               <h6>Our Courses</h6>
               <ul>
-                <li><a href="courses.html">Face-To-Face Courses</a></li>
-                <li><a href="courses.html">Online Courses</a></li>
-                <li><a href="courses.html">Hybrid Courses</a></li>
-                <li><a href="courses.html">Companies Courses</a></li>
+                <li class="li-one">
+                  <a href="courses-list.html">Face-To-Face Courses</a>
+                </li>
+                <li><a href="courses-list.html">Online Courses</a></li>
+                <li><a href="courses-list.html">Hybrid Courses</a></li>
+                <li><a href="courses-list.html">Companies Courses</a></li>
               </ul>
             </div>
           </div>
@@ -1809,7 +1932,7 @@
             <div class="footer-title" id="footer-title">
               <h6>Contact Us</h6>
               <ul>
-                <li>
+                <li class="li-one">
                   <img src="images/fi_home.png" alt="fi_home" />
                   4074 Ebert Summit Suite 375
                 </li>
@@ -1849,9 +1972,9 @@
         </div>
 
         <div class="footer-section-one d-none">
-          <div class="container">
+          <div class="container" id="footer-section-one">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-two">
                   <h6>Our Services</h6>
                   <div class="footer-title" id="section-two">
@@ -1876,7 +1999,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-three">
                   <h6>About Us</h6>
 
@@ -1902,22 +2025,24 @@
               </div>
             </div>
             <div class="row" id="footer-mobile">
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-one">
                   <h6>Our Courses</h6>
                   <div class="footer-title" id="section-one">
                     <ul>
-                      <li><a href="courses.html">Face-To-Face Courses</a></li>
-                      <li><a href="courses.html">Online Courses</a></li>
+                      <li>
+                        <a href="courses-list.html">Face-To-Face Courses</a>
+                      </li>
+                      <li><a href="courses-list.html">Online Courses</a></li>
                     </ul>
                     <ul>
-                      <li><a href="courses.html">Hybrid Courses</a></li>
-                      <li><a href="courses.html">Companies Courses</a></li>
+                      <li><a href="courses-list.html">Hybrid Courses</a></li>
+                      <li><a href="courses-list.html">Companies Courses</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 p-0">
                 <div class="section-four">
                   <h6>Contact Us</h6>
                   <div class="footer-title" id="section-four">
@@ -1936,7 +2061,9 @@
                     <ul>
                       <li>
                         <img src="images/fi_phone.png" alt="fi_phone" />
-                        <a href="tel:+44 123 654 7890">+44 123 654 7890</a>
+                        <a href="tel:+44 123 654 7890" id="phone"
+                          >+44 123 654 7890</a
+                        >
                       </li>
                       <li class="social">
                         <a href="#">
@@ -1986,7 +2113,9 @@
         </div>
       </div>
     </footer>
-
+    <div class="button-contact-us d-none">
+      <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </div>
     <!-- End Footer -->
 
     <!-- Bootstrap -->
