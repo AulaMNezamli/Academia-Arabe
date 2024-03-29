@@ -12,6 +12,7 @@
 }
 body {
   overflow-x: hidden;
+  background-color: var(--background-color);
 }
 div#menu-sidebar-icon {
   display: none;
@@ -21,7 +22,7 @@ div#menu-sidebar-icon {
   background: transparent;
   font-size: 20px;
   position: relative;
-  right: 60px;
+  right: 20px;
   top: -2px;
 }
 .sidenav {
@@ -117,7 +118,6 @@ div#mySidenav h3 {
 @media (max-width: 597px) {
   #menu-sidebar-icon button {
     position: absolute;
-    right: 25px;
     top: 28px;
   }
 }
@@ -232,7 +232,6 @@ a.nav-link,
 .contact {
   padding-left: 32px;
 }
-
 .contact button {
   color: var(--color-white);
   padding: 12px 24px;
@@ -244,16 +243,17 @@ a.nav-link,
   background-color: var(--color);
   box-shadow: 0px 0px 15px 1px rgba(8, 43, 63, 0.5);
 }
-
+.contact button:active {
+  background-color: var(--color) !important;
+  border: none !important;
+}
 a.nav-link.active {
   color: var(--color) !important;
 }
-
 a.nav-link:hover,
 a.nav-link:focus {
   color: var(--color) !important;
 }
-
 .dropdown-toggle::after {
   display: none;
 }
@@ -274,6 +274,7 @@ a.nav-link:focus {
   line-height: normal;
   letter-spacing: -0.25px;
   color: var(--color);
+  margin: 0;
 }
 .text p {
   font-family: var(--font-family);
@@ -284,6 +285,7 @@ a.nav-link:focus {
   letter-spacing: 0.4px;
   color: var(--color-one);
   padding-bottom: 32px;
+  margin: 0;
 }
 .text button {
   border-radius: 8px;
@@ -318,11 +320,12 @@ a.nav-link:focus {
   background-size: contain;
   height: 490.27px;
   position: relative;
+  left: 50px;
 }
 .vector img.vec-one {
   width: 430px;
   position: absolute;
-  left: 10.3rem;
+  left: 13.8rem;
   top: 26px;
 }
 .courses {
@@ -330,7 +333,7 @@ a.nav-link:focus {
   padding: 16px 24px;
   position: absolute;
   top: 187px;
-  left: 110px;
+  left: 165px;
   background-color: rgba(241, 81, 82, 1);
   border-radius: 8px;
   display: flex;
@@ -357,12 +360,13 @@ a.nav-link:focus {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
+  margin: 0;
 }
 .learners {
   height: 72px;
   padding: 16px 24px;
   position: absolute;
-  left: 29.39rem;
+  left: 32.39rem;
   top: 19.8rem;
   background-color: rgba(2, 195, 154, 1);
   border-radius: 8px;
@@ -452,7 +456,7 @@ section.client {
   top: 90px;
 }
 .col-md-6 {
-  padding: 0;
+  /* padding: 0; */
   position: relative;
 }
 .face-to-face-box {
@@ -531,13 +535,14 @@ div#card-mobile {
 .two-section {
   background-image: url(../images/Group.png);
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 section.choose-us {
   height: 460px;
   width: 100%;
 }
 .col-md-4 {
-  padding: 0;
+  /* padding: 0; */
 }
 .group,
 .group1 {
@@ -598,13 +603,16 @@ section.section-courses {
   padding-bottom: 64px;
 }
 .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
 .text-title {
   margin: auto;
   text-align: center;
+}
+.see {
+  position: absolute;
+  right: 0;
+  top: 80px;
 }
 .text-title h1 {
   font-family: var(--font-family);
@@ -612,6 +620,7 @@ section.section-courses {
   font-weight: 700;
   line-height: 72px;
   color: rgba(11, 57, 84, 1);
+  margin: 0;
 }
 .text-title p {
   font-family: var(--font-family);
@@ -664,20 +673,21 @@ button.show-more:hover {
 #tabs .show {
   display: block;
 }
+.content {
+  padding-left: 13px;
+}
 .card {
   border: 1px solid transparent;
   margin: auto;
   padding: 16px;
   border-radius: 16px;
   align-items: center;
+  background-color: var(--background-color);
 }
 .card:hover {
   border: 1px solid var(--color);
   transition: 0.3s;
 }
-/* img.card-img-top {
-  width: 246px;
-} */
 .card-body {
   padding: 16px 0 0 0;
   cursor: default;
@@ -686,6 +696,12 @@ button.show-more:hover {
   background-color: #d1eaf9;
   padding: 8px 10px;
   border-radius: 8px;
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
 }
 .card-title.online {
   background-color: #fde9e9;
@@ -698,7 +714,11 @@ button.show-more:hover {
 .card-title.companies {
   background-color: #fddbfb;
   color: #bd0db6;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 20px;
 }
 .card-title span {
   color: var(--color);
@@ -778,7 +798,7 @@ span.descuento {
 
 /* Start Our Services Section */
 section.our-services {
-  background-image: linear-gradient(151deg, #d1eaf6 50%, #d1eaf600 0%),
+  background-image: linear-gradient(152deg, #d1eaf6 50%, #d1eaf600 0%),
     url(../images/Groupa.png);
   background-size: auto;
   background-repeat: no-repeat;
@@ -1025,7 +1045,8 @@ span.card-title-blog {
 }
 .card-blog:hover .card-title-blog {
   color: var(--color);
-  border-bottom: 1px solid var(--color);
+  text-decoration: underline;
+  text-decoration-color: var(--color);
 }
 p.card-blog-text {
   color: var(--color-one);
@@ -1340,6 +1361,50 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
 }
+.modal-content {
+  background-color: var(--background-color);
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  border: 1px solid var(--color-white);
+  outline: none;
+  background-color: var(--color);
+  color: var(--color-white);
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+input#name:focus,
+input#name:hover,
+input#email:focus,
+input#email:hover,
+input#mobile:focus,
+input#mobile:hover,
+textarea#messgae:focus,
+textarea#messgae:hover,
+.select-selected:focus,
+.select-selected:hover,
+input#place:focus,
+input#place:hover,
+input#number:hover,
+input#number:focus {
+  outline: 1px solid #000;
+}
+input#mobile::placeholder {
+  color: var(--color-one);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+
 @media (max-width: 1400px) {
   .dropdown-menu.shadow.show {
     left: 17rem;
@@ -1351,14 +1416,17 @@ input[type="checkbox"] {
   .group1 {
     margin-left: 0;
   }
+  .vector {
+    left: 0;
+  }
   .vector img.vec-one {
-    left: 7.3rem;
+    left: 10.6rem;
   }
   .courses {
-    left: 65px;
+    left: 112px;
   }
   .learners {
-    left: 26.39rem;
+    left: 29rem;
   }
 }
 @media (max-width: 1300px) {
@@ -1388,21 +1456,6 @@ input[type="checkbox"] {
   #section-two {
     gap: 93px;
   }
-  .nav-hero {
-    height: 691px;
-  }
-  .vector img.vec-one {
-    width: 400px;
-    left: 5.3rem;
-    top: 43px;
-  }
-  .courses {
-    left: 35px;
-  }
-  .learners {
-    left: 23.2rem;
-    top: 19.3rem;
-  }
   #footer-mobile {
     padding-top: 50px;
   }
@@ -1426,12 +1479,35 @@ input[type="checkbox"] {
     width: 290px;
     padding: 20px 12px;
   }
+  .nav-hero {
+    height: 617px;
+  }
+  .vector {
+    height: 450px;
+  }
+  .vector img.vec-one {
+    width: 360px;
+    left: 9.14rem;
+  }
+  .courses {
+    left: 76px;
+    top: 170px;
+    padding: 8px 16px;
+  }
+  .learners {
+    left: 24rem;
+    top: 16rem;
+    padding: 8px 16px;
+  }
   .our-courses-box {
     right: 0;
   }
   .our-courses-box-one {
     left: 32px;
     top: 65px;
+  }
+  .text-choose {
+    width: 381px;
   }
   a#phone {
     font-size: 15px;
@@ -1494,22 +1570,19 @@ input[type="checkbox"] {
     font-size: 15px;
   }
   .nav-hero {
-    height: 617px;
+    height: 597px;
   }
   .vector img.vec-one {
     width: 345px;
-    left: 7rem;
+    left: 9.7rem;
   }
   .courses {
     height: 65px;
-    padding: 16px 16px;
-    left: 40px;
+    left: 78px;
   }
   .learners {
-    left: 20.5rem;
-    top: 16rem;
+    left: 23.5rem;
     height: 65px;
-    padding: 16px 16px;
   }
 }
 @media (max-width: 1040px) {
@@ -1522,6 +1595,9 @@ input[type="checkbox"] {
   section.our-services {
     background-image: linear-gradient(130deg, #d1eaf6 49%, #d1eaf600 0%),
       url(../images/Groupa.png);
+  }
+  #menu-sidebar-icon button {
+    right: 120px;
   }
   span.descuento {
     font-size: 14px;
@@ -1658,10 +1734,10 @@ input[type="checkbox"] {
   }
   /*END NAVBAR */
   .nav-hero {
-    height: 540px;
+    height: 526px;
   }
   .text {
-    width: 345px;
+    width: 300px;
     padding-top: 25px;
   }
   .text h2 {
@@ -1676,13 +1752,13 @@ input[type="checkbox"] {
   }
   .vector img.vec-one {
     width: 300px;
-    left: 3.8rem;
-    top: 27px;
+    left: 5.8rem;
+    top: 16px;
   }
   .courses {
     height: 58px;
     padding: 16px 8px;
-    left: 28px;
+    left: 47px;
     top: 125px;
   }
   .text-courses span {
@@ -1706,7 +1782,7 @@ input[type="checkbox"] {
 }
 @media (max-width: 890px) {
   .text-choose {
-    width: 320px;
+    width: 300px;
   }
 }
 @media (max-width: 885px) {
@@ -1727,8 +1803,14 @@ input[type="checkbox"] {
     background-image: linear-gradient(131deg, #d1eaf6 49%, #d1eaf600 0%),
       url(../images/Groupa.png);
   }
+  .text-choose h3 {
+    font-size: 36px;
+  }
 }
 @media (max-width: 768px) {
+  #menu-sidebar-icon button {
+    right: 20px;
+  }
   .background-courses {
     height: auto;
   }
@@ -1783,6 +1865,9 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 767px) {
+  #menu-sidebar-icon button {
+    right: 140px;
+}
   section.choose-us {
     height: auto !important;
   }
@@ -1870,11 +1955,8 @@ input[type="checkbox"] {
   a.dropdown-item:hover {
     color: var(--color);
   }
-  #menu-sidebar-icon button {
-    right: 100px;
-  }
   .nav-hero {
-    height: 1058px;
+    height: 1042px;
   }
   .text {
     width: auto;
@@ -1927,9 +2009,6 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 620px) {
-  #menu-sidebar-icon button {
-    right: 65px;
-  }
   .courses {
     left: 62px;
   }
@@ -1938,6 +2017,9 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 576px) {
+  #menu-sidebar-icon button {
+    right: 20px;
+}
   .title {
     display: block !important;
   }
@@ -2032,10 +2114,6 @@ input[type="checkbox"] {
   .background-courses {
     background-image: none;
   }
-  .container {
-    max-width: 720px !important;
-    padding: 0px 16px;
-  }
   .text {
     padding: 48px 16px 0 16px;
   }
@@ -2051,7 +2129,6 @@ input[type="checkbox"] {
   }
   .vector img.vec-one {
     width: 350px;
-    left: 7.3rem;
     top: 17px;
   }
   .courses {
@@ -2105,7 +2182,7 @@ input[type="checkbox"] {
     bottom: 44rem;
   }
 }
-@media (max-width: 503px) {
+@media (max-width: 527px) {
   .nav-hero {
     height: 962px;
   }
@@ -2144,9 +2221,6 @@ input[type="checkbox"] {
   a.btn.btn-outline-primary {
     padding: 12px 24px;
   }
-  #menu-sidebar-icon button {
-    right: 10px;
-  }
   .nav-hero {
     height: 861px;
   }
@@ -2179,6 +2253,11 @@ input[type="checkbox"] {
     line-height: 40px;
   }
 }
+@media (max-width: 449px) {
+  .nav-hero {
+    height: 877px;
+  }
+}
 @media (max-width: 426px) {
   section.our-services {
     background-image: linear-gradient(100deg, #d1eaf6 51%, #d1eaf600 0%),
@@ -2191,31 +2270,54 @@ input[type="checkbox"] {
       url(../images/Groupa.png);
   }
   .nav-hero {
-    height: 886px;
+    height: 877px;
   }
   .vector {
     position: relative;
     right: 29px;
   }
 }
-@media (max-width: 386px) {
+@media (max-width: 402px) {
   .nav-hero {
-    height: 909px;
+    height: 901px;
   }
   .vector img.vec-one {
-    left: 5.6rem;
+    left: 5.3rem;
   }
-  .vector {
-    right: 15px;
+}
+@media (max-width: 396px) {
+  .nav-hero {
+    height: 863px;
+  }
+  .vector img.vec-one {
+    width: 250px;
+    left: 5.8rem;
+    top: 13px;
   }
   .courses {
-    left: 35px;
+    top: 74px;
+    left: 14px;
+  }
+  .learners {
+    width: auto;
+    top: 11.8rem;
+    left: 13rem;
+  }
+}
+@media (max-width: 388px) {
+  .nav-hero {
+    height: 888px;
   }
 }
 @media (max-width: 376px) {
   section.our-services {
     background-image: linear-gradient(98deg, #d1eaf6 51%, #d1eaf600 0%),
       url(../images/Groupa.png);
+  }
+}
+@media (max-width: 375px) {
+  .nav-hero {
+    height: 960px;
   }
 }
 @media (max-width: 372px) {
@@ -2229,52 +2331,54 @@ input[type="checkbox"] {
   .our-courses-title h3 {
     font-size: 45px;
   }
-  .nav-hero {
-    height: 934px;
-  }
-  .vector img.vec-one {
-    left: 5rem;
-  }
-  .courses {
-    left: 23px;
-  }
-  .learners {
-    left: 13rem;
-  }
-}
-@media (max-width: 360px) {
-  .text-choose h3 {
-    font-size: 35px;
-  }
 }
 @media (max-width: 359px) {
-  .nav-hero {
-    height: 929px;
+  .text-choose h3 {
+    font-size: 35px;
   }
   .text h2 {
     font-size: 45px;
   }
+  .vector img.vec-one {
+    left: 4.8rem;
+  }
+  .nav-hero {
+    height: 884px;
+  }
+  .learners {
+    left: 11rem;
+  }
+}
+@media (max-width: 355px) {
+  .nav-hero {
+    height: 952px;
+  }
+}
+@media (max-width: 345px) {
+  .nav-hero {
+    height: 975px;
+  }
 }
 @media (max-width: 340px) {
   .nav-hero {
-    height: 922px;
+    height: 901px;
   }
   .text h2 {
     font-size: 40px;
   }
   .vector img.vec-one {
-    left: 4rem;
+    left: 3rem;
   }
   .courses {
-    left: 15px;
+    left: -9px;
   }
   .learners {
-    left: 12rem;
+    left: 10rem;
   }
 }
-@media (max-width: 329px) {
+@media (max-width: 330px) {
   .nav-hero {
-    height: 909px;
+    height: 901px;
   }
   .vector {
     height: 290px;
@@ -2282,11 +2386,16 @@ input[type="checkbox"] {
   }
   .vector img.vec-one {
     width: 250px;
-    left: 4.5rem;
+    left: 3.5rem;
   }
   .learners {
-    left: 11rem;
+    left: 10rem;
     top: 14rem;
+  }
+}
+@media (max-width: 322px) {
+  .nav-hero {
+    height: 925px;
   }
 }
 @media (max-width: 320px) {
@@ -2296,5 +2405,14 @@ input[type="checkbox"] {
   }
   .text-choose h3 {
     font-size: 33px;
+  }
+  .vector img.vec-one {
+    left: 2.5rem;
+  }
+  .courses {
+    top: 97px;
+  }
+  .nav-hero {
+    height: 985px;
   }
 }

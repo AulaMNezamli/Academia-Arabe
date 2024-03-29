@@ -17,19 +17,25 @@ nav#navbar-navigation {
   line-height: 20px;
   letter-spacing: 0.4px;
 }
+.home a:hover {
+  font-size: 16px;
+}
 .home i.fa-solid.fa-chevron-right {
   display: inline;
-  font-size: 24px;
+  font-size: 16px;
   color: var(--color-one);
 }
 
 .title-filter {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 40px;
 }
-
+.col-md-4 {
+  padding-right: 24px;
+  border-right: 1px solid var(--color-grey);
+}
 .pages-filter {
   display: flex;
   gap: 10px;
@@ -40,6 +46,7 @@ nav#navbar-navigation {
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
+  margin: 0;
 }
 .pages-filter span {
   color: var(--color-b);
@@ -54,6 +61,7 @@ nav#navbar-navigation {
   border: 1px solid var(--color-grey) !important;
   box-shadow: unset !important;
   margin-bottom: 24px;
+  background-color: var(--background-color);
 }
 .accordion-button:not(.collapsed) {
   box-shadow: unset;
@@ -99,6 +107,22 @@ nav#navbar-navigation {
   padding: 8px 10px;
   cursor: pointer;
 }
+.course-one-page:hover,
+.online-course:hover,
+.hybrid-one:hover {
+  background-color: var(--color);
+  border-color: var(--color);
+}
+.course-one-page:hover.course-one-page span,
+.online-course:hover.online-course span,
+.hybrid-one:hover.hybrid-one span {
+  color: var(--color-white);
+}
+.course-one-page:hover.course-one-page small,
+.online-course:hover.online-course small,
+.hybrid-one:hover.hybrid-one small {
+  color: var(--color-white);
+}
 .course-one-page span,
 .online-course span,
 .hybrid-one span {
@@ -107,6 +131,7 @@ nav#navbar-navigation {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
+  transition: 0.3s;
 }
 .course-one-page small,
 .online-course small,
@@ -116,6 +141,7 @@ nav#navbar-navigation {
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.4px;
+  transition: 0.3s;
 }
 
 label.form-check-label {
@@ -289,7 +315,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 18px;
   width: 18px;
   border-radius: 70%;
-  background: #555;
+  background: var(--color);
   pointer-events: auto;
   -webkit-appearance: none;
 }
@@ -330,11 +356,17 @@ input[type="range"]::-webkit-slider-thumb {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.4px;
+  transition: 0.3s;
 }
-.pagination li.active {
+.pagination li.active,
+.pagination li:hover {
   background-color: var(--color);
   color: var(--color-white);
   border-color: var(--color);
+}
+.pagination li:hover i.fa-solid.fa-chevron-left,
+.pagination li:hover i.fa-solid.fa-chevron-right {
+  color: var(--color-white);
 }
 i.fa-solid.fa-chevron-right,
 i.fa-solid.fa-chevron-left {
@@ -372,7 +404,6 @@ button#filterButton {
   top: 128%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--color-white);
   padding: 100px 75px 32px 75px;
 
   border-radius: 5px;
@@ -380,7 +411,7 @@ button#filterButton {
 .title-filter-modal {
   display: flex;
   justify-content: space-between;
-  padding: 100px 0 32px 0;
+  padding: 0 0 32px 0;
   align-items: center;
 }
 .title-filter-modal h4 {
@@ -394,7 +425,7 @@ button#filterButton {
 .title-filter-modal i.fa-solid.fa-xmark {
   position: unset;
 }
-button.btn.btn-primary {
+#view-course {
   display: none;
   border-radius: 8px;
   background: var(--color);
@@ -405,15 +436,15 @@ button.btn.btn-primary {
   border: none;
   letter-spacing: 0.4px;
 }
-button.btn.btn-primary:hover {
+#view-course:hover {
   background-color: var(--color);
   box-shadow: 0px 0px 15px 1px rgba(8, 43, 63, 0.5);
 }
-button.btn.btn-primary:active {
+#view-course:active {
   background-color: var(--color) !important;
   border-color: unset;
 }
-button.btn.btn-primary:focus-visible {
+#view-course:focus-visible {
   background-color: var(--color);
   border-color: unset;
   outline: 0;
@@ -475,6 +506,9 @@ span.descuento {
   .price-field input {
     font-size: inherit;
   }
+  .content {
+    padding-left: 0;
+  }
   .title-filter {
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -498,6 +532,9 @@ span.descuento {
 @media screen and (max-width: 575px) {
   .modal-content {
     padding: 100px 16px 32px 16px;
+  }
+  .col-lg-4.col-md-6.card-blog {
+    padding: 0;
   }
 }
 @media screen and (max-width: 425px) {

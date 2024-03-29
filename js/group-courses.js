@@ -2,21 +2,29 @@ var overlay = document.getElementById("overlay");
 var drop = document.getElementById("drop");
 var dropOne = document.getElementById("drop-one");
 var dropTwo = document.getElementById("drop-two");
+
+function toggleModalOpen() {
+  document.body.classList.toggle("modal-open");
+}
+
 drop.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
+
 dropOne.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
+
 dropTwo.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
+
 overlay.onclick = (_) => {
   overlay.style.display = "none";
-  document.body.style.overflowY = "auto";
+  toggleModalOpen();
 };
 // SideBar
 function openNav() {
@@ -46,7 +54,7 @@ $(".slider-three").owlCarousel({
   items: 3,
   loop: false,
   margin: 16,
-  nav: false,
+  nav: true,
   navText: [
     '<i class="fa-solid fa-chevron-left"></i>',
     '<i class="fa-solid fa-chevron-right"></i>',
@@ -146,3 +154,34 @@ $("#home").owlCarousel({
     },
   },
 });
+// Back to top button
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+var formToHide = document.querySelector('.div-eight');
+var targetSection = document.querySelector('#mySection');
+window.addEventListener('scroll', function() {
+    if (window.innerWidth >= 992) {
+        var targetSectionPosition = targetSection.getBoundingClientRect().bottom;
+        if (targetSectionPosition <= window.innerHeight) {
+            formToHide.style.display = 'none';
+        } else {
+            formToHide.style.display = 'block';
+        }
+    } else {
+        formToHide.style.display = 'block';
+    }
+});
+

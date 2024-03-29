@@ -61,7 +61,7 @@
       <div class="container">
         <a class="navbar-brand m-0" href="home.html">
           <img src="images/Academia Árabe-Main Logo.png" alt="logo" />
-          <span>Academia Arabe</span>
+          <span>Academia Árabe</span>
         </a>
         <button
           class="navbar-toggler"
@@ -80,7 +80,7 @@
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
+              <a class="nav-link" aria-current="page" href="home.html"
                 >Home</a
               >
             </li>
@@ -347,7 +347,7 @@
             </div>
             <ul class="mysidenav-ul">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html"
+                <a class="nav-link" aria-current="page" href="home.html"
                   >Home</a
                 >
               </li>
@@ -555,264 +555,7 @@
             </div>
           </div>
           <div class="col-lg-7 col-md-12" id="col-lg-7">
-            <div class="form-registration" id="step1">
-              <h5>Step 1/3</h5>
-              <h6>Information</h6>
-              <div class="form-container">
-                <div class="row" id="mobile-row">
-                  <div class="col-xl-6 col-lg-12">
-                    <div class="forminput" id="forminput">
-                      <label for="name" class="form-label"
-                        >Name and Surname</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        placeholder="Enter your name and surname"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-12">
-                    <div class="forminput" id="forminput">
-                      <label for="email" class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row" id="mobile-row">
-                  <div class="col-xl-6 col-lg-12">
-                    <div
-                      class="forminput d-flex"
-                      style="flex-direction: column"
-                      id="forminput"
-                    >
-                      <label for="mobile" class="form-label">phone</label>
-                      <input
-                        placeholder="Enter your phone"
-                        class="for1"
-                        type="tel"
-                        maxlength="40"
-                        size="20"
-                        pattern="[+]{0,1}[0-9]{8,13}"
-                        name="mobile"
-                        id="mobile"
-                        class="AutosubmitCalculator"
-                        value="+971"
-                        onkeypress="return AllowOnlyNumbers(event);"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-xxl-6 col-xl-6">
-                    <div class="forminput" id="forminput">
-                      <label for="country" class="form-label">Country</label>
-                      <div class="tt-select">
-                        <select
-                          id="country"
-                          name="country"
-                          class="form-select"
-                        ></select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row" id="gender">
-                  <div class="col-xl-12 col-lg-12">
-                    <div class="forminput">
-                      <label for="gender" class="form-label">Gender</label>
-                      <div class="tt-select">
-                        <select
-                          id="gender"
-                          class="form-select"
-                          aria-label="Default select "
-                        >
-                          <option selected disabled class="first-value">
-                            Choose your gender
-                          </option>
-                          <option value="male">Male</option>
-                          <option class="last-value" value="female">
-                            Female
-                          </option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-xxl-6 col-xl-12 col-lg-12">
-                    <label for="date-of-birth" class="form-label"
-                      >Date of Birth</label
-                    >
-                    <div class="row">
-                      <div class="col-md-4 col-4">
-                        <div class="form-day">
-                          <select id="day">
-                            <option value="">Day</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4 col-4" id="col-md-4">
-                        <div class="form-month">
-                          <select id="month">
-                            <option value="">Month</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4 col-4" id="col-md-4-year">
-                        <div class="form-year">
-                          <select id="year">
-                            <option value="">Year</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="next-step">
-                    <button id="nextStep">Next Step</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-registration" id="step2" style="display: none">
-              <h5>Step 2/3</h5>
-              <h6>Course Details</h6>
-              <div class="form-container">
-                <div class="row" id="mobile-row">
-                  <div class="col-xl-6 col-lg-12">
-                    <div class="forminput" id="forminput">
-                      <label for="course" class="form-label">Course</label>
-                      <div class="tt-select">
-                        <select id="course" class="form-select">
-                          <option selected disabled>Choose Course</option>
-                          <option value="courses">Face-To-Face Courses</option>
-                          <option value="online">Online Courses</option>
-                          <option value="Hendrerit">Hybrid Courses</option>
-                          <option value="companies">Companies Courses</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-12">
-                    <div class="forminput" id="formprice">
-                      <label for="price" class="form-label">Price</label>
-                      <span>€790</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row" id="mobile-row">
-                  <div class="col-xl-6 col-lg-12">
-                    <div class="forminput" id="forminput">
-                      <label for="preferred" class="form-label"
-                        >Preferred Time</label
-                      >
-                      <div class="tt-select">
-                        <select id="preferred" class="form-select">
-                          <option selected disabled>
-                            Choose your preferred time
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xxl-6 col-xl-6">
-                    <div class="forminput" id="forminput">
-                      <label for="alternative" class="form-label"
-                        >Alternative Time</label
-                      >
-                      <div class="tt-select">
-                        <select id="alternative" class="form-select">
-                          <option selected disabled>
-                            Choose your alternative time
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row" id="gender">
-                  <div class="col-xl-6 col-lg-12">
-                    <div class="forminput" id="forminput">
-                      <label for="preferred" class="form-label"
-                        >Preferred Time</label
-                      >
-                      <div class="tt-select">
-                        <select id="preferred" class="form-select">
-                          <option selected disabled>
-                            Choose your preferred time
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-xxl-6 col-xl-12 col-lg-12">
-                    <div class="forminput" id="forminput">
-                      <label for="alternative" class="form-label"
-                        >Knowledge of Arabic</label
-                      >
-
-                      <div class="tt-select">
-                        <select id="alternative" class="form-select">
-                          <option selected disabled>
-                            Choose your Knowledge of Arabic
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="button-form">
-                    <div class="next-step" id="next-step2">
-                      <button id="nextStep2">Next Step</button>
-                    </div>
-                    <div class="previous-step" id="previous-step">
-                      <button id="previousstep desktop">
-                        <img src="images/fi_arrow-left.svg" alt="" />
-                        Previous Step
-                      </button>
-                      <button class="d-none previous-mobile" id="previousstep">
-                        <img src="images/fi_arrow-left.svg" alt="" />
-                        Previous
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="form-registration" id="step3" style="display: none">
-              <h5>Step 3/3</h5>
-              <h6>Payment</h6>
               <div class="form-container">
                 <div class="row">
                   <div class="col-md-12">
@@ -895,6 +638,300 @@
                 </div>
               </div>
             </div>
+
+
+            <form id="regForm" action="">
+              <div class="tab">
+                <div class="tab-title">
+                  <h5>Step 1/3</h5>
+                  <h6>Information</h6>
+                </div>
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="name" class="form-label"
+                        >Name and Surname</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter your name and surname"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
+                    <div
+                      class="forminput d-flex"
+                      style="flex-direction: column"
+                      id="forminput"
+                    >
+                      <label for="mobile" class="form-label">phone</label>
+                      <input
+                        placeholder="Enter your phone"
+                        class="for1"
+                        type="tel"
+                        maxlength="40"
+                        size="20"
+                        pattern="[+]{0,1}[0-9]{8,13}"
+                        name="mobile"
+                        id="mobile"
+                        class="AutosubmitCalculator"
+                        value="+971"
+                        onkeypress="return AllowOnlyNumbers(event);"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="country" class="form-label">Country</label>
+                      <div class="tt-select">
+                        <select
+                          id="country"
+                          name="country"
+                          class="form-select"
+                        ></select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="gender">
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput">
+                      <label for="gender" class="form-label">Gender</label>
+                      <div class="tt-select">
+                        <select
+                          id="gender"
+                          class="form-select"
+                          aria-label="Default select "
+                        >
+                          <option selected disabled class="first-value">
+                            Choose your gender
+                          </option>
+                          <option value="male">Male</option>
+                          <option class="last-value" value="female">
+                            Female
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-12">
+                    <label for="date-of-birth" class="form-label"
+                      >Date of Birth</label
+                    >
+                    <div class="row">
+                      <div class="col-md-4 col-4" id="col-md-4-day">
+                        <div class="form-day">
+                          <select id="day">
+                            <option value="">Day</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-4" id="col-md-4">
+                        <div class="form-month">
+                          <select id="month">
+                            <option value="">Month</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-4" id="col-md-4-year">
+                        <div class="form-year">
+                          <select id="year">
+                            <option value="">Year</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab">
+                <div class="tab-title">
+                  <h5>Step 2/3</h5>
+                  <h6>Course Details</h6>
+                </div>
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="course" class="form-label">Course</label>
+                      <div class="tt-select">
+                        <select id="course" class="form-select">
+                          <option selected disabled>Choose Course</option>
+                          <option value="courses">Face-To-Face Courses</option>
+                          <option value="online">Online Courses</option>
+                          <option value="Hendrerit">Hybrid Courses</option>
+                          <option value="companies">Companies Courses</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="formprice">
+                      <label for="price" class="form-label">Price</label>
+                      <span>€790</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="mobile-row">
+                  <div class="col-xl-6 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="preferred" class="form-label"
+                        >Preferred Time</label
+                      >
+                      <div class="tt-select">
+                        <select id="preferred" class="form-select">
+                          <option selected disabled>
+                            Choose your preferred time
+                          </option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xxl-6 col-xl-6">
+                    <div class="forminput" id="forminput">
+                      <label for="alternative" class="form-label"
+                        >Alternative Time</label
+                      >
+                      <div class="tt-select">
+                        <select id="alternative" class="form-select">
+                          <option selected disabled>
+                            Choose your alternative time
+                          </option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="gender">
+                  <div class="col-xxl-12 col-xl-12 col-lg-12">
+                    <div class="forminput" id="forminput">
+                      <label for="alternative" class="form-label"
+                        >Knowledge of Arabic</label
+                      >
+
+                      <div class="tt-select">
+                        <select id="alternative" class="form-select">
+                          <option selected disabled>
+                            Choose your Knowledge of Arabic
+                          </option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab">
+                <div class="tab-title">
+                  <h5>Step 3/3</h5>
+                  <h6>Payment</h6>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="forminput" id="forminput">
+                      <label for="payment" class="form-label"
+                        >Payment Method</label
+                      >
+                      <div class="tt-select">
+                        <select id="payment" class="form-select">
+                          <option selected disabled>Bank Wire</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="text-payment">
+                        <span>
+                          BBVA: BBVA (IBAN: ES54 0182 0967 7002 0159 2292)
+                        </span>
+                        <span> BIC: (BIC: BBVAESMMXXX) </span>
+                        <span
+                          >IMPORTANT: INDICATE YOUR NAME AND SURNAME AS THE
+                          CONCEPT. THEN SEND US PROOF OF PAYMENT TO OUR EMAIL
+                          (INFO@ACADEMIAARABE.ES)</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="forminput" id="forminput">
+                      <label for="invoices" class="form-label"
+                        >ID for Invoices</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="invoices"
+                        placeholder="Enter your ID for Invoices"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <div class="input-day">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    I have read and accept the
+                    <a href="#">privacy policy</a> and
+                    <a href="#">terms and conditions</a>.
+                  </label>
+                </div>
+              </div>
+              <div class="button-form">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                  <img src="images/fi_arrow-left.svg" alt="" />
+                  Previous<span class="mobile-only"> Step</span>
+                </button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <img src="images/fi_arrow-left.svg" alt="" />
+                  Next Step
+                </button>
+              </div>
+
+              <div class="d-none" style="text-align: center; margin-top: 40px">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+            </form>
+
           </div>
         </div>
       </div>
@@ -1145,7 +1182,10 @@
       <button onclick="window.location.href='contact.html'">Contact Us</button>
     </div>
     <!-- End Footer -->
-
+    <!-- Back To Up -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

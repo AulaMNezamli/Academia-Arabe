@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const contentOurBlog = document.createElement("div");
       contentOurBlog.className = "content-our-blog";
       contentOurBlog.innerHTML = `
-      <div class="img-blog">
+      <div class="img-blog" onclick="window.location.href='blog-details.html'">
         <img src="images/content blog.png" alt="" />
       </div>
       <div class="title-our-blog">
@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage--;
         updatePagination();
         displayData();
+        scrollToTop();
       }
     });
     paginationContainer.appendChild(prevButton);
@@ -102,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage = i;
         updatePagination();
         displayData();
+        scrollToTop();
       });
       if (i === currentPage) {
         li.classList.add("active");
@@ -115,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
           currentPage = totalPages;
           updatePagination();
           displayData();
+          scrollToTop();
         });
         if (totalPages === currentPage) {
           li.classList.add("active");
@@ -134,10 +137,16 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage++;
         updatePagination();
         displayData();
+        scrollToTop();
       }
     });
     paginationContainer.appendChild(nextButton);
   }
+  
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  
   const tagsButtons = document.querySelectorAll(".button-tags button");
   tagsButtons.forEach((button, index) => {
     button.addEventListener("click", function () {

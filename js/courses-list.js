@@ -3,24 +3,28 @@ var drop = document.getElementById("drop");
 var dropOne = document.getElementById("drop-one");
 var dropTwo = document.getElementById("drop-two");
 
+function toggleModalOpen() {
+  document.body.classList.toggle("modal-open");
+}
+
 drop.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 dropOne.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 dropTwo.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 overlay.onclick = (_) => {
   overlay.style.display = "none";
-  document.body.style.overflowY = "auto";
+  toggleModalOpen();
 };
 // ========================================================
 
@@ -45,13 +49,9 @@ function closeNav() {
 }
 
 // ========================================================
-// Script.js
 const rangevalue = document.querySelector(".slider-container .price-slider");
 const rangeInputvalue = document.querySelectorAll(".range-input input");
-
-// Set the price gap
 let priceGap = 500;
-
 // Adding event listners to price input elements
 const priceInputvalue = document.querySelectorAll(".price-input input");
 for (let i = 0; i < priceInputvalue.length; i++) {
@@ -141,165 +141,6 @@ document
     });
   });
 // ========================================================
-// Pagination
-// document.addEventListener("DOMContentLoaded", function () {
-//   const itemsPerPage = 12;
-//   const totalItems = 120;
-//   const totalPages = Math.ceil(totalItems / itemsPerPage);
-//   let currentPage = 1;
-
-//   const paginationContainer = document.getElementById("pagination");
-//   const cardContainer = document.getElementById("card-container");
-
-//   function displayData() {
-//     // cardContainer.innerHTML = "";
-//     const startIndex = (currentPage - 1) * itemsPerPage + 1;
-//     const endIndex = Math.min(startIndex + itemsPerPage - 1, totalItems);
-
-//     // Create a row div for each set of three cards
-//     for (let i = startIndex; i <= endIndex; i++) {
-//       if ((i - 1) % 3 === 0) {
-//         var row = document.createElement("div");
-//         row.className = "row";
-//       }
-
-//       // Create a col-md-4 div for each card
-//       const col = document.createElement("div");
-//       col.className = "col-lg-4 col-md-4";
-
-//       // Create a card element
-//       const card = document.createElement("div");
-//       card.className = "card";
-//       card.style.marginBottom = "20px"; // Add margin for spacing between cards
-
-//       // Create an image element
-//       const image = document.createElement("img");
-//       image.src = "images/Rectangle 7.png";
-//       image.className = "card-img-top";
-//       image.alt = "rectangle";
-
-//       // Create a card body
-//       const cardBody = document.createElement("div");
-//       cardBody.className = "card-body";
-
-//       // Create a card title
-//       const cardTitle = document.createElement("span");
-//       cardTitle.className = "card-title";
-//       cardTitle.textContent = "Face-To-Face";
-
-//       // Create a cost element
-//       const cost = document.createElement("div");
-//       cost.className = "cost";
-
-//       // Create a span for cost
-//       const costSpan = document.createElement("span");
-//       costSpan.textContent = "€7900";
-
-//       // Create a paragraph for card text
-//       const cardText = document.createElement("p");
-//       cardText.className = "card-text";
-//       cardText.textContent =
-//         "Lorem ipsum dolor sit amet consectetur. Tortor mi massa";
-
-//       // Create a button element
-//       const button = document.createElement("button");
-//       button.className = "btn btn-primary";
-//       button.textContent = "View Course";
-
-//       // Append elements to their respective parents
-//       cost.appendChild(costSpan);
-//       cardBody.appendChild(cardTitle);
-//       cardBody.appendChild(cost);
-//       cardBody.appendChild(cardText);
-//       cardBody.appendChild(button); // Append button under cardText
-//       card.appendChild(image);
-//       card.appendChild(cardBody);
-
-//       // Append the card to the col
-//       col.appendChild(card);
-
-//       // Append the col to the row
-//       row.appendChild(col);
-
-//       // Append the row to the card container for every third card
-//       if (i % 3 === 0 || i === endIndex) {
-//         cardContainer.appendChild(row);
-//       }
-//       // Add a click event listener to navigate to another page
-//       card.addEventListener("click", function () {
-//         window.location.href = "group-courses.html";
-//       });
-//     }
-//   }
-
-//   function updatePagination() {
-//     paginationContainer.innerHTML = "";
-
-//     const prevButton = document.createElement("li");
-//     prevButton.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-//     prevButton.addEventListener("click", function () {
-//       if (currentPage > 1) {
-//         currentPage--;
-//         updatePagination();
-//         displayData();
-//       }
-//     });
-//     paginationContainer.appendChild(prevButton);
-
-//     for (let i = 1; i <= totalPages; i++) {
-//       const li = document.createElement("li");
-//       li.textContent = i;
-
-//       li.addEventListener("click", function () {
-//         currentPage = i;
-//         updatePagination();
-//         displayData();
-//       });
-
-//       if (i === currentPage) {
-//         li.classList.add("active");
-//       }
-
-//       if (i <= 6) {
-//         paginationContainer.appendChild(li);
-//       } else if (i === totalPages) {
-//         const li = document.createElement("li");
-//         li.textContent = totalPages;
-//         li.addEventListener("click", function () {
-//           currentPage = totalPages;
-//           updatePagination();
-//           displayData();
-//         });
-
-//         if (totalPages === currentPage) {
-//           li.classList.add("active");
-//         }
-
-//         paginationContainer.appendChild(li);
-//       } else if (i === 7 && totalPages > 7) {
-//         const dots = document.createElement("li");
-//         dots.textContent = "...";
-//         dots.classList.add("dots");
-//         paginationContainer.appendChild(dots);
-//       }
-//     }
-
-//     const nextButton = document.createElement("li");
-//     nextButton.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
-//     nextButton.addEventListener("click", function () {
-//       if (currentPage < totalPages) {
-//         currentPage++;
-//         updatePagination();
-//         displayData();
-//       }
-//     });
-//     paginationContainer.appendChild(nextButton);
-//   }
-
-//   displayData();
-//   updatePagination();
-// });
-// ========================================================
 
 document.addEventListener("DOMContentLoaded", function () {
   const filterButton = document.getElementById("filterButton");
@@ -354,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="card-text">
           Lorem ipsum dolor sit amet consectetur. Tortor mi massa
         </p>
-        <button class="btn btn-primary">View Course</button>
+        <button class="btn btn-primary" id="view-course">View Course</button>
       </div>
     </div>
       `;
@@ -388,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">
               Lorem ipsum dolor sit amet consectetur. Tortor mi massa
             </p>
-            <button class="btn btn-primary">View Course</button>
+            <button class="btn btn-primary"  id="view-course">View Course</button>
           </div>
         </div>
           `;
@@ -422,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">
               Lorem ipsum dolor sit amet consectetur. Tortor mi massa
             </p>
-            <button class="btn btn-primary">View Course</button>
+            <button class="btn btn-primary"  id="view-course">View Course</button>
           </div>
         </div>
               `;
@@ -460,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="card-text">
             Lorem ipsum dolor sit amet consectetur. Tortor mi massa
           </p>
-          <button class="btn btn-primary">View Course</button>
+          <button class="btn btn-primary"  id="view-course">View Course</button>
         </div>
       </div>
               `;

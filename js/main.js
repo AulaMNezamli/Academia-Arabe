@@ -132,24 +132,28 @@ var drop = document.getElementById("drop");
 var dropOne = document.getElementById("drop-one");
 var dropTwo = document.getElementById("drop-two");
 
+function toggleModalOpen() {
+  document.body.classList.toggle("modal-open");
+}
+
 drop.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 dropOne.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 dropTwo.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 overlay.onclick = (_) => {
   overlay.style.display = "none";
-  document.body.style.overflowY = "auto";
+  toggleModalOpen();
 };
 // ===================================================================
 
@@ -279,3 +283,18 @@ $("#my-carousel-four").owlCarousel({
     },
   },
 });
+
+// Back to top button
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

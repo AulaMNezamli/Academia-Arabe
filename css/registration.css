@@ -1,3 +1,6 @@
+body {
+  background-color: var(--background-color);
+}
 .navbar {
   position: relative !important;
 }
@@ -22,15 +25,19 @@ section {
   letter-spacing: 0.4px;
   margin: 0;
 }
-.form-registration {
+#regForm {
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border-radius: 16px;
   background: var(--background-color);
 }
-.form-registration h5 {
+.tab-title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tab-title h5 {
   color: var(--color);
   font-family: var(--font-family);
   font-size: 32px;
@@ -39,7 +46,7 @@ section {
   line-height: 48px;
   margin: 0;
 }
-.form-registration h6 {
+.tab-title h6 {
   color: var(--color-b);
   font-family: var(--font-family);
   font-size: 24px;
@@ -47,29 +54,15 @@ section {
   line-height: 36px;
   margin: 0;
 }
-#row {
-  gap: 112px;
-}
-#col-lg-5 {
-  width: 39%;
-  padding: 0;
-}
-#col-lg-7 {
-  width: 49%;
-  padding: 0;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
 .form-section {
   display: none;
   animation: slideIn 0.5s ease-in-out;
 }
-
 .form-section.active {
   display: block;
 }
@@ -81,15 +74,12 @@ label {
   display: block;
   margin-bottom: 8px;
 }
-
 input {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
 }
-
 .form-label {
-  margin-bottom: 8px;
   color: var(--color-one);
   font-family: var(--font-family);
   font-weight: 600;
@@ -98,7 +88,8 @@ input {
 input#name,
 input#email,
 input#mobile,
-.form-select {
+.form-select,
+input#invoices {
   color: var(--color-one);
   font-family: var(--font-family);
   letter-spacing: 0.4px;
@@ -135,9 +126,17 @@ select {
   height: 48px;
   background-image: url(../images/Icon.svg);
   background-repeat: no-repeat;
-  background-position: 61px 12px;
+  background-position: 75px 12px;
   background-size: 24px;
   cursor: pointer;
+  width: 100%;
+  color: var(--color-one);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.4px;
 }
 .form-select {
   background-image: url(../images/Icon.svg);
@@ -150,11 +149,14 @@ select {
   cursor: pointer;
 }
 #col-md-4 {
-  padding-left: 6px;
-  padding-right: 5px;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 #col-md-4-year {
   padding-left: 0;
+}
+#col-md-4-day {
+  padding-right: 0;
 }
 .date-birth {
   display: flex;
@@ -165,10 +167,13 @@ select {
   margin-left: auto;
   display: flex;
 }
-button#nextStep,
-button#nextStep2,
-button#submit-form,
-.button-successfully button {
+form#step1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+button#nextBtn,
+#nextStep {
   padding: 12px 24px;
   border-radius: 8px;
   background: var(--color);
@@ -179,14 +184,10 @@ button#submit-form,
   transition: 0.3s;
   border: none;
 }
-button#nextStep:hover,
-button#nextStep2:hover,
-button#submit-form:hover,
-.button-successfully button:hover {
+button#nextBtn:hover {
   background-color: var(--color);
   box-shadow: 0px 0px 15px 1px rgba(8, 43, 63, 0.5);
 }
-/* ============================================ */
 .tt-select {
   position: relative;
 }
@@ -207,7 +208,15 @@ button#submit-form:hover,
   cursor: pointer;
 }
 .select-items {
+  position: absolute;
+  background-color: var(--color-white);
+  right: 0;
+  z-index: 99;
+  width: 100%;
   border-radius: 8px;
+  margin-top: 2px;
+  max-height: 122px;
+  overflow: auto;
   border: 1px solid var(--color-grey);
   color: var(--color-one);
   font-family: var(--font-family);
@@ -231,17 +240,6 @@ button#submit-form:hover,
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #000000 transparent;
   top: 10px;
-}
-.select-items {
-  position: relative;
-  background-color: var(--color-white);
-  right: 0;
-  z-index: 99;
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 2px;
-  max-height: 122px;
-  overflow: auto;
 }
 .select-items div {
   padding: 8px;
@@ -275,17 +273,11 @@ div#formprice span {
 }
 .button-form {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: end;
 }
-div#next-step2 {
-  margin-left: auto;
-}
-div#previous-step {
-  margin-left: 0;
-}
-button#previousstep,
-button#previousstep1,
-button#previousstep\ desktop {
+button#prevBtn {
+  margin-right: auto;
+  background-color: var(--color-white);
   display: flex;
   padding: 12px 24px;
   justify-content: center;
@@ -297,7 +289,9 @@ button#previousstep\ desktop {
   font-family: var(--font-family);
   font-weight: 600;
   letter-spacing: 0.4px;
-  background: transparent;
+}
+button#prevBtn:hover {
+  background-color: transparent;
 }
 input[type="checkbox"] {
   left: 25px;
@@ -305,6 +299,10 @@ input[type="checkbox"] {
 label.form-check-label {
   margin: 0;
   padding-left: 16px;
+}
+.form-check-input:focus {
+  box-shadow: unset;
+  border: 1px solid var(--color);
 }
 .text-payment {
   display: flex;
@@ -316,49 +314,53 @@ label.form-check-label {
   font-family: var(--font-family);
   letter-spacing: 0.4px;
 }
-div#gender {
-  display: flex;
-  gap: 24px;
+.tab,
+.tab-mobile {
+  padding: 0;
+  border-bottom: 0;
+  width: auto;
+  cursor: unset;
+  font-family: unset;
+  text-align: left;
+  letter-spacing: unset;
+  flex-direction: column;
+  gap: 16px;
+  display: none;
 }
 @media (max-width: 1400px) {
   select {
-    width: 100%;
-    background-position: 120px 12px;
+    background-position: 62px 12px;
+    padding: 4px 0px 4px 6px;
   }
-  #col-md-4 {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  #regForm {
+    padding: 24px 24px 24px 0;
   }
-  #col-md-4-year {
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-  }
-  #gender {
-    gap: 16px;
+  .col-xl-6.col-lg-12 {
+    padding-left: 0;
   }
 }
 @media (max-width: 1300px) {
   select {
-    background-position: 110px 12px;
+    background-position: 55px 12px;
   }
 }
 @media (max-width: 1200px) {
   select {
-    background-position: 90px 12px;
-  }
-  #row {
-    gap: 90px;
+    background-position: 125px 12px;
+    padding: 4px 0px 4px 16px;
   }
   #mobile-row {
     gap: 16px;
   }
+  .col-xl-6.col-lg-12 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
 }
-
 @media (max-width: 1100px) {
   select {
     background-position: 80px 12px;
   }
 }
-
 @media (max-width: 992px) {
   #col-lg-7 {
     width: 100%;
@@ -369,8 +371,9 @@ div#gender {
   select {
     background-position: 160px 12px;
   }
-  #row {
-    gap: 48px;
+  div#gender {
+    display: flex;
+    gap: 16px;
   }
   section {
     background-image: url(../images/Groupa.png);
@@ -386,7 +389,10 @@ div#gender {
 }
 @media (max-width: 768px) {
   select {
-    background-position: 115px 12px;
+    background-position: 131px 12px;
+  }
+  .tab {
+    width: 100% !important;
   }
 }
 @media (max-width: 715px) {
@@ -402,49 +408,33 @@ div#gender {
 @media (max-width: 575px) {
   section {
     background-image: unset;
-    padding: 48px 16px;
-  }
-  .form-registration {
-    padding: 0;
-    background: transparent;
+    padding: 48px 0;
   }
   select {
-    background-position: 115px 12px;
+    background-position: 140px 12px;
   }
   .iti__flag {
     background-size: 5762px 20px;
   }
-  .previous-mobile {
-    display: block !important;
+  #regForm {
+    padding: 24px 0;
   }
-  button#previousstep\ desktop,
-  button#previousstep1 {
+  .mobile-only {
     display: none;
   }
 }
 @media (max-width: 500px) {
   select {
-    background-position: 100px 12px;
-  }
-}
-@media (max-width: 450px) {
-  select {
-    background-position: 85px 12px;
+    background-position: 90px 12px;
   }
 }
 @media (max-width: 400px) {
   select {
-    background-position: 75px 12px;
-  }
-}
-@media (max-width: 376px) {
-  select {
-    background-position: 65px 12px;
+    background-position: 80px 12px;
   }
 }
 @media (max-width: 320px) {
   select {
-    background-position: 50px 12px;
-    padding: 4px 0px 4px 6px;
+    background-position: 63px 12px;
   }
 }

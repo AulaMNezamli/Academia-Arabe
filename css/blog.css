@@ -1,5 +1,6 @@
 .academy-section {
   background-position: top left;
+  background-attachment: fixed;
 }
 .title-ourblog {
   text-align: center;
@@ -161,6 +162,7 @@
   background-repeat: no-repeat;
   background-position: left top;
   height: 1782px;
+  background-attachment: fixed;
 }
 .custom-nav {
   display: flex;
@@ -172,8 +174,8 @@
   border-top: 1px solid var(--color-grey);
   border-bottom: 1px solid var(--color-grey);
 }
-.owl-nav {
-  display: none;
+.card {
+  background-color: transparent;
 }
 button.custom-prev-btn,
 button.custom-next-btn {
@@ -238,6 +240,7 @@ div#card-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  cursor: pointer;
 }
 .title-our-blog {
   width: max-content;
@@ -251,7 +254,7 @@ div#card-container {
   line-height: 48px;
   border-bottom: 2px solid transparent;
 }
-.title-our-blog h5:hover {
+.content-our-blog:hover .title-our-blog {
   color: var(--color);
   border-bottom: 2px solid var(--color);
 }
@@ -298,11 +301,17 @@ div#card-container {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.4px;
+  transition: 0.3s;
 }
-.pagination li.active {
+.pagination li.active,
+.pagination li:hover {
   background-color: var(--color);
   color: var(--color-white);
   border-color: var(--color);
+}
+.pagination li:hover i.fa-solid.fa-chevron-left,
+.pagination li:hover i.fa-solid.fa-chevron-right {
+  color: var(--color-white);
 }
 i.fa-solid.fa-chevron-right,
 i.fa-solid.fa-chevron-left {
@@ -314,6 +323,23 @@ i.fa-solid.fa-chevron-left {
 button.custom-prev-btn:hover,
 button.custom-next-btn:hover {
   background-color: #e1e4e6;
+}
+button.owl-next i.fa-solid.fa-chevron-right,
+button.owl-prev i.fa-solid.fa-chevron-left {
+  font-size: 24px;
+}
+@media (max-width: 1405px) {
+  .button-tags-one,
+  .button-tags-three {
+    flex-direction: column;
+  }
+  .button-tags button {
+    width: 80%;
+  }
+  .button-tags-two,
+  .button-tags-four {
+    text-align: left;
+  }
 }
 @media (max-width: 1200px) {
   .tags {
@@ -353,14 +379,19 @@ button.custom-next-btn:hover {
     flex-direction: column;
     padding: 64px 0px 0 15px;
   }
-  .button-one,
-  .button-two {
-    flex-direction: row;
-  }
 }
 @media (max-width: 767px) {
   .section-carousel {
     height: 2258px;
+  }
+  .button-one,
+  .button-two,
+  .button-tags-one,
+  .button-tags-three {
+    flex-direction: row;
+  }
+  .button-tags button {
+    width: auto;
   }
 }
 @media (max-width: 575px) {

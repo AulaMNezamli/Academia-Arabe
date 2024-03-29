@@ -1,6 +1,6 @@
-#container {
+/* #container {
   padding: 0;
-}
+} */
 .hero-section {
   background-image: url(../images/Hero\ Section.png);
   background-repeat: no-repeat;
@@ -32,6 +32,7 @@
   background-image: url(../images/Clip\ path\ group.png);
   background-repeat: no-repeat;
   background-position: top right;
+  background-attachment: fixed;
 }
 .about {
   display: inline-flex;
@@ -65,6 +66,7 @@ img.jason-goodman {
 .content-services {
   gap: 0 !important;
   background-color: var(--background-color);
+  padding: 24px 24px 24px 0px;
 }
 .about button.active {
   background: rgba(11, 57, 84, 0.16);
@@ -173,6 +175,9 @@ button#filterButton {
 .offer {
   padding: 40px 0;
 }
+.col-md-4.col-sm-4.col-6 {
+  padding: 0;
+}
 button#filterButton {
   background-color: unset !important;
   padding: 8px !important;
@@ -267,7 +272,7 @@ button#filterButton {
   }
 }
 .activities-content {
-  padding: 64px 3px 64px 24px;
+  padding: 64px 3px 64px 0;
 }
 .activities-section {
   padding: 24px;
@@ -311,7 +316,7 @@ button#filterButton {
 /* Teachers */
 .teachers-section {
   border-radius: 16px;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 .teachers-activities {
   display: flex;
@@ -406,7 +411,7 @@ button#filterButton {
 }
 /* arabic-levels-section */
 .all-arabic-levels {
-  padding: 64px 40px 64px 64px;
+  padding: 64px 40px 64px 0;
 }
 .arabic-levels {
   display: flex;
@@ -468,14 +473,14 @@ button#filterButton {
 /* facilities */
 .facilities {
   display: flex;
-  padding: 40px 0px 40px 40px;
+  padding: 40px 0px;
   flex-direction: column;
   align-items: flex-start;
   gap: 64px;
 }
 .facilities-content,
 .work-with-us-content {
-  padding: 24px;
+  padding: 24px 24px 24px 0;
   align-self: stretch;
   border-radius: 16px;
   background: var(--background-color);
@@ -1025,7 +1030,10 @@ input#mobile:focus-visible {
 }
 @media (max-width: 796px) {
   .about button {
-    padding: 12px;
+    padding: 10px;
+  }
+  .modal-content {
+    padding: 52px 100px 48px 100px !important;
   }
 }
 @media (max-width: 767px) {
@@ -1041,7 +1049,6 @@ input#mobile:focus-visible {
     padding: 0;
   }
   .modal-content {
-    /* top: 70% !important; */
     padding: 52px 75px 48px 75px !important;
   }
   .activities {
@@ -1136,5 +1143,8 @@ input#mobile:focus-visible {
   }
   .group-one button {
     padding: 12px !important;
+  }
+  div#container {
+    padding: 0;
   }
 }

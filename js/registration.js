@@ -3,24 +3,28 @@ var drop = document.getElementById("drop");
 var dropOne = document.getElementById("drop-one");
 var dropTwo = document.getElementById("drop-two");
 
+function toggleModalOpen() {
+  document.body.classList.toggle("modal-open");
+}
+
 drop.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 dropOne.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 dropTwo.onclick = (e) => {
   overlay.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  toggleModalOpen();
 };
 
 overlay.onclick = (_) => {
   overlay.style.display = "none";
-  document.body.style.overflowY = "auto";
+  toggleModalOpen();
 };
 // SideBar
 function openNav() {
@@ -39,7 +43,6 @@ function closeNav() {
   let open = document.getElementById("mySidenav");
   open.style.display = "none";
 }
-
 const input = document.querySelector("#mobile");
 window.intlTelInput(input, {
   initialCountry: "us",
@@ -779,27 +782,72 @@ function populateCountries(countryElementId, stateElementId) {
 
 populateCountries("country", "state");
 // ============================================================
-
-document.getElementById("nextStep").addEventListener("click", function () {
-  document.getElementById("step1").style.display = "none";
-  document.getElementById("step2").style.display = "flex";
-});
-document.getElementById("nextStep2").addEventListener("click", function () {
-  document.getElementById("step2").style.display = "none";
-  document.getElementById("step3").style.display = "flex";
-});
-document.getElementById("previous-step").addEventListener("click", function () {
-  document.getElementById("step2").style.display = "none";
-  document.getElementById("step1").style.display = "flex";
-});
-document
-  .getElementById("previous-step-one")
-  .addEventListener("click", function () {
-    document.getElementById("step3").style.display = "none";
-    document.getElementById("step2").style.display = "flex";
-  });
+var currentTab = 0;
+showTab(currentTab);
+function showTab(n) {
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "flex";
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next Step";
+  }
+  fixStepIndicator(n)
+}
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = true;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
 // ============================================================
-
 document.addEventListener("DOMContentLoaded", function () {
   const daySelect = document.getElementById("day");
   const monthSelect = document.getElementById("month");
@@ -838,7 +886,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //==========================================================
 var x, i, j, selElmnt, a, b, c;
 x = document.getElementsByClassName("tt-select");
-
 for (i = 0; i < x.length; i++) {
   selElmnt = x[i].getElementsByTagName("select")[0];
   a = document.createElement("DIV");
@@ -850,13 +897,12 @@ for (i = 0; i < x.length; i++) {
   for (j = 0; j < selElmnt.length; j++) {
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    
-    // نقل الكلاسات من الخيارات الأصلية إلى DIV
+
     var optionClasses = selElmnt.options[j].className;
     if (optionClasses) {
       c.className += " " + optionClasses;
     }
-    
+
     c.addEventListener("click", function (e) {
       var y, i, k, s, h;
       s = this.parentNode.parentNode.getElementsByTagName("select")[0];
@@ -906,3 +952,18 @@ function closeAllSelect(elmnt) {
   }
 }
 document.addEventListener("click", closeAllSelect);
+
+// Back to top button
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

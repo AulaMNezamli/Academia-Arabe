@@ -17,9 +17,12 @@ nav#navbar-navigation {
   letter-spacing: 0.4px;
   width: max-content;
 }
+.home a:hover {
+  font-size: 16px;
+}
 .home i.fa-solid.fa-chevron-right {
   display: inline;
-  font-size: 24px;
+  font-size: 16px;
   color: var(--color-one);
 }
 .group-courses {
@@ -27,7 +30,7 @@ nav#navbar-navigation {
   background-size: cover;
   background-repeat: no-repeat;
   height: max-content;
-  padding: 40px 100px;
+  padding: 40px 0;
 }
 .text-group-courses h5 {
   color: var(--color-b);
@@ -85,7 +88,8 @@ nav#navbar-navigation {
   background-image: url("../images/Clip path group.png");
   background-repeat: no-repeat;
   background-position: top left;
-  padding: 40px 100px 40px 76px;
+  padding: 40px 0;
+  background-attachment: fixed;
 }
 .all-section-group-courses {
   display: flex;
@@ -109,6 +113,7 @@ nav#navbar-navigation {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
+  margin: 0;
 }
 .text-section-group-courses p {
   color: var(--color-one);
@@ -277,9 +282,6 @@ i.fa-solid.fa-arrow-right {
   background-color: var(--color);
   box-shadow: 0px 0px 15px 1px rgba(8, 43, 63, 0.5);
 }
-/* #card-div-seven-one {
-  margin-right: 16px;
-} */
 #card-div-seven {
   margin-left: 32px;
   border-radius: 20px;
@@ -294,7 +296,6 @@ span.discount {
   font-weight: 500;
 }
 .section-group-courses-one {
-  padding: 0px 100px;
   margin: 128px 0;
 }
 .section-group-courses-one h5,
@@ -313,13 +314,18 @@ span.discount {
 .card {
   margin: 0;
   border: 1px solid transparent;
+  background-color: transparent;
 }
 
 p.card-text {
   padding: 0;
 }
 .asked-questions {
-  padding: 0px 100px 128px 76px;
+  padding: 0px 0 128px 0;
+}
+.accordion-button,
+.accordion-body {
+  background-color: var(--background-color) !important;
 }
 .accordion-button::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
@@ -455,9 +461,12 @@ table thead tr:first-child th {
   padding: 24px;
   z-index: 5;
   position: fixed;
-  top: 110px;
-  width: 380px;
+  top: 88px;
+  width: 340px;
   right: 100px;
+}
+.iti__arrow {
+  top: 8px;
 }
 .title-form-fixed h5 {
   color: var(--color-b);
@@ -477,6 +486,11 @@ form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.form-check-input:focus {
+  border-color: var(--color);
+  outline: 0;
+  box-shadow: unset;
 }
 input#name,
 input#email,
@@ -533,6 +547,7 @@ input[type="checkbox"] {
   display: flex;
   gap: 8px;
 }
+
 @media (max-width: 1300px) {
   .form-fixed {
     right: 20px;
