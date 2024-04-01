@@ -316,6 +316,7 @@ button#filterButton {
 /* Teachers */
 .teachers-section {
   border-radius: 16px;
+  background-color: var(--background-color);
   /* padding-left: 10px; */
 }
 .teachers-activities {
@@ -356,6 +357,15 @@ button#filterButton {
   padding: 0px 16px;
   margin: 0;
 }
+.collapsed-text {
+  max-height: 142px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.expanded {
+  max-height: none;
+}
+
 .read-more {
   margin-right: auto;
   padding: 8px 16px;
@@ -1035,6 +1045,18 @@ input#mobile:focus-visible {
   .modal-content {
     padding: 52px 100px 48px 100px !important;
   }
+  .img-activites img {
+    width: 260px;
+  }
+  .img-activites::after {
+    height: 69px;
+  }
+  .img-icons {
+    top: 129px;
+  }
+  .img-icons a {
+    height: 33px;
+  }
 }
 @media (max-width: 767px) {
   #about-desktop {
@@ -1062,6 +1084,18 @@ input#mobile:focus-visible {
   }
   .group-activities {
     padding-bottom: 24px;
+  }
+  .img-activites img {
+    width: auto;
+  }
+  .img-activites::after {
+    height: 90px;
+  }
+  .img-icons {
+    top: 135px;
+  }
+  .img-icons a {
+    height: 40px;
   }
 }
 @media (max-width: 575px) {

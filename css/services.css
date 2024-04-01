@@ -94,6 +94,7 @@
   display: flex;
   gap: 24px;
   padding-bottom: 24px;
+  border-radius: 16px;
 }
 .service ul {
   padding-bottom: 24px;

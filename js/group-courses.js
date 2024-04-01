@@ -26,6 +26,7 @@ overlay.onclick = (_) => {
   overlay.style.display = "none";
   toggleModalOpen();
 };
+
 // SideBar
 function openNav() {
   let open = document.getElementById("mySidenav");
@@ -47,12 +48,14 @@ function scrollToSection() {
   var section = document.getElementById("mySection");
   section.scrollIntoView({ behavior: "smooth" });
 }
-document.getElementById("contact-button").addEventListener("click", function() {
-  window.location.href = "contact.html";
-});
+document
+  .getElementById("contact-button")
+  .addEventListener("click", function () {
+    window.location.href = "contact.html";
+  });
 $(".slider-three").owlCarousel({
   items: 3,
-  loop: false,
+  loop: true,
   margin: 16,
   nav: true,
   navText: [
@@ -83,7 +86,7 @@ $(".slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
   );
 });
 $("#owl-carousel").owlCarousel({
-  loop: false,
+  loop: true,
   margin: 24,
   nav: true,
   navText: [
@@ -116,7 +119,7 @@ $(".slider-one")
   })
   .owlCarousel({
     items: 1,
-    loop: false,
+    loop: true,
     margin: 0,
     nav: true,
     navText: [
@@ -154,11 +157,23 @@ $("#home").owlCarousel({
     },
   },
 });
+
+var formToHide = document.querySelector(".div-eight");
+var targetSection = document.querySelector("#mySection");
+
 // Back to top button
 let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
+
+window.onscroll = function () {
+  scrollFunction();
+  showBackToTopAtSectionEnd();
+};
+
 function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -170,18 +185,25 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-var formToHide = document.querySelector('.div-eight');
-var targetSection = document.querySelector('#mySection');
-window.addEventListener('scroll', function() {
-    if (window.innerWidth >= 992) {
-        var targetSectionPosition = targetSection.getBoundingClientRect().bottom;
-        if (targetSectionPosition <= window.innerHeight) {
-            formToHide.style.display = 'none';
-        } else {
-            formToHide.style.display = 'block';
-        }
-    } else {
-        formToHide.style.display = 'block';
-    }
-});
+function showBackToTopAtSectionEnd() {
+  let targetSectionPosition = targetSection.getBoundingClientRect().bottom;
+  let windowHeight = window.innerHeight;
+  if (targetSectionPosition <= windowHeight) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
+window.addEventListener("scroll", function () {
+  if (window.innerWidth >= 992) {
+    var targetSectionPosition = targetSection.getBoundingClientRect().bottom;
+    if (targetSectionPosition <= window.innerHeight) {
+      formToHide.style.display = "none";
+    } else {
+      formToHide.style.display = "block";
+    }
+  } else {
+    formToHide.style.display = "block";
+  }
+});

@@ -65,3 +65,10 @@ $(".slider-three").owlCarousel({
     },
   },
 });
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Optional smooth scrolling animation
+  });
+}

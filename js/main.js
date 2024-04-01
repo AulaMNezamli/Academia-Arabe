@@ -71,7 +71,7 @@ $("#slider-one")
   })
   .owlCarousel({
     items: 1,
-    loop: false,
+    loop: true,
     margin: 0,
     nav: true,
     navText: [
@@ -105,7 +105,7 @@ $("#slider").on("initialized.owl.carousel changed.owl.carousel", function (e) {
   );
 });
 $("#slider").owlCarousel({
-  loop: false,
+  loop: true,
   margin: 24,
   nav: true,
   navText: [
@@ -124,6 +124,16 @@ $("#slider").owlCarousel({
     },
   },
 });
+// ===================================================================
+
+// document.querySelectorAll('.read-more a').forEach(function(element) {
+//   element.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     var textContainer = this.parentElement.previousElementSibling;
+//     textContainer.classList.toggle('expanded-blog');
+//     this.innerText = textContainer.classList.contains('expanded') ? 'Read Less' : 'Read More';
+//   })
+// });
 
 // ===================================================================
 
@@ -286,9 +296,14 @@ $("#my-carousel-four").owlCarousel({
 
 // Back to top button
 let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";

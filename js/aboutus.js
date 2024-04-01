@@ -65,6 +65,18 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+document.querySelectorAll('.read-more a').forEach(function(element) {
+  element.addEventListener('click', function(event) {
+    event.preventDefault();
+    var textContainer = this.parentElement.previousElementSibling;
+    textContainer.classList.toggle('expanded');
+    this.innerText = textContainer.classList.contains('expanded') ? 'Read Less' : 'Read More';
+  })
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const filterButton = document.getElementById("filterButton");
   const filterModal = document.getElementById("filterModal");

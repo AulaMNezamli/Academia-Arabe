@@ -1,5 +1,7 @@
 nav#navbar-navigation {
-  position: unset;
+  position: fixed;
+  background-color: var(--background-color);
+  z-index: 98;
 }
 .home {
   display: flex;
@@ -7,6 +9,7 @@ nav#navbar-navigation {
   align-items: center;
   border-bottom: 1px solid var(--color-grey);
   margin-bottom: 40px;
+  margin-top: 106px;
 }
 .home a {
   padding: 8px 0px;
@@ -16,9 +19,11 @@ nav#navbar-navigation {
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.4px;
+  border-bottom: 2px solid transparent;
+
 }
 .home a:hover {
-  font-size: 16px;
+  border-bottom: 2px solid var(--color);
 }
 .home i.fa-solid.fa-chevron-right {
   display: inline;
@@ -457,6 +462,9 @@ span.descuento {
   width: 150.747px;
   top: 26px;
   right: -37px;
+}
+.card-blog {
+  padding: 0 16px 16px 16px;
 }
 @media screen and (max-width: 1200px) {
   .accordion-body.two {

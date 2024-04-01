@@ -1,11 +1,17 @@
 nav#navbar-navigation {
-  position: unset;
+  position: fixed;
+  background-color: var(--background-color);
+  z-index: 100;
 }
 .home {
   display: flex;
   gap: 8px;
   align-items: center;
   border-bottom: 1px solid var(--Sys-Neutral-Outline, var(--color-grey));
+  margin-top: 106px;
+}
+div#home-container {
+  height: 39px;
 }
 .home a {
   padding: 8px 0px;
@@ -16,9 +22,10 @@ nav#navbar-navigation {
   line-height: 20px;
   letter-spacing: 0.4px;
   width: max-content;
+  border-bottom: 2px solid transparent;
 }
 .home a:hover {
-  font-size: 16px;
+  border-bottom: 2px solid var(--color);
 }
 .home i.fa-solid.fa-chevron-right {
   display: inline;
@@ -95,7 +102,6 @@ nav#navbar-navigation {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background: var(--background-color);
   margin-top: 40px;
   border-radius: 16px;
 }
@@ -164,6 +170,8 @@ nav#navbar-navigation {
   display: flex;
   gap: 16px;
   flex-direction: column;
+  background-color: var(--background-color);
+  border-radius: 16px;
 }
 .texts-div-four {
   display: flex;
@@ -459,9 +467,9 @@ table thead tr:first-child th {
   border: 1px solid var(--Sys-Neutral-Outline, var(--color-grey));
   background: var(--Sys-Neutral-Surface, var(--background-color));
   padding: 24px;
-  z-index: 5;
+  z-index: 97;
   position: fixed;
-  top: 88px;
+  top: 165px;
   width: 340px;
   right: 100px;
 }

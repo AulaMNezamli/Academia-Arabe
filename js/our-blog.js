@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const colCardBlog = document.createElement("div");
       colCardBlog.className = "col-md-4 card-blog";
       colCardBlog.innerHTML = `
-        <a href="offer.html">
+        <a href="blog-details.html">
           <img src="images/null.png" class="card-img" alt="rectangle">
           <div class="card-blog-body">
             <span class="card-title-blog">Face-To-Face Courses</span>

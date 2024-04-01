@@ -26,6 +26,7 @@ overlay.onclick = (_) => {
   overlay.style.display = "none";
   toggleModalOpen();
 };
+
 // ========================================================
 
 // SideBar
